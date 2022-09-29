@@ -3,7 +3,7 @@ var APP_PREFIX = '3v3cad';
 var VERSION = 'v202209291549';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [    
-  `${PATH}/`,
+ /*  `${PATH}/`, */
   `${PATH}/index.html`,
   `${PATH}/css/bulma.min.css`,
   `${PATH}/js/jquery-3.6.1.min.js`,

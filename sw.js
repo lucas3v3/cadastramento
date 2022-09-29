@@ -1,6 +1,6 @@
 var PATH = '/cadastramento';
 var APP_PREFIX = '3v3cad';
-var VERSION = 'v202209291423';
+var VERSION = 'v202209291525';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [    
   `${PATH}/`,
@@ -10,25 +10,27 @@ var URLS = [
   `${PATH}/js/app.js`
 ]
 
-self.addEventListener('install', function(e) {
-	e.waitUntil(
-		caches.open(CACHE_NAME).then(function(cache) {
+self.addEventListener('install', event => {
+	event.waitUntil(
+		caches.open(CACHE_NAME)
+		.then(cache => {
 			console.log('Instalando cache: ' + CACHE_NAME);
 			return cache.addAll(URLS)
 		})
 	)
 }) 
 
-self.addEventListener('fetch', function(e) {
-	console.log('Requisitando: ' + e.request.url);
-	e.respondWith(
-		caches.match(e.request).then(function(request) {
+self.addEventListener('fetch', event => {
+	console.log('Requisitando: ' + event.request.url);
+	event.respondWith(
+		caches.match(event.request)
+		.then(request => {
 			if (request) {
-				console.log('Respondendo com arquivo em cache: ' + e.request.url);
+				console.log('Respondendo com arquivo em cache: ' + event.request.url);
 				return request
 			} else {
-				console.log('Arquivo não encontrado no cache, requisitando: ' + e.request.url);
-				return fetch(e.request)
+				console.log('Arquivo não encontrado no cache, requisitando: ' + event.request.url);
+				return fetch(event.request)
 			}
 		})
 	)

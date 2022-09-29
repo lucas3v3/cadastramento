@@ -1,6 +1,6 @@
 var PATH = '/cadastramento';
 var APP_PREFIX = '3v3cad';
-var VERSION = 'v202209291631';
+var VERSION = 'v202209291632';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [    
   `${PATH}/`,

@@ -1,0 +1,30 @@
+{
+  // Name of the app and short name in case there isn't enough space
+  "name": "CAD - 3v3 Tecnologia",
+  "short_name": "3V3CAD",
+  // Description what your app is
+  "description": "Cadastramento de usuários da água",
+
+  // Scope and start URL - these need to change to yours
+  "scope": "/cadastramento/",
+  "start_url": "/cadastramento/",
+
+  // colours of the app as displayed in the installer
+  "background_color": "#3273dc",
+  "theme_color": "#3273dc",
+
+  // Display of the app. 
+  //This could be "standalone", "fullscreen", "minimal-ui" or "browser"
+  "display": "standalone", 
+  
+  // The possible icons to display. Make sure to change the src URL,
+  // the type and the size to your needs. If the size isn't correct, 
+  // you may not be able to install the app. 
+  "icons": [
+      {
+        "src": "/cadastramento/img/icon.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }
+  ]
+}

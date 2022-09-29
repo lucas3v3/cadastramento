@@ -1,17 +1,7 @@
-// Change this to your repository name
 var PATH = '/cadastramento';
-
-// Choose a different app prefix name
 var APP_PREFIX = '3v3cad';
-
-// The version of the cache. Every time you change any of the files
-// you need to change this version (version_01, version_02…). 
-// If you don't change the version, the service worker will give your
-// users the old files!
-var VERSION = 'v0.0.1';
-
-// The files to make available for offline use. make sure to add 
-// others to this list
+var VERSION = 'v202209291423';
+var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [    
   `${PATH}/`,
   `${PATH}/index.html`,
@@ -19,3 +9,28 @@ var URLS = [
   `${PATH}/js/jquery-3.6.1.min.js`,
   `${PATH}/js/app.js`
 ]
+
+self.addEventListener('install', function(e) {
+	e.waitUntil(
+		caches.open(CACHE_NAME).then(function(cache) {
+			console.log('Instalando cache: ' + CACHE_NAME);
+			return cache.addAll(URLS)
+		})
+	)
+}) 
+
+self.addEventListener('fetch', function(e) {
+	console.log('Requisitando: ' + e.request.url);
+	e.respondWith(
+		caches.match(e.request).then(function(request) {
+			if (request) {
+				console.log('Respondendo com arquivo em cache: ' + e.request.url);
+				return request
+			} else {
+				console.log('Arquivo não encontrado no cache, requisitando: ' + e.request.url);
+				return fetch(e.request)
+			}
+		})
+	)
+})
+

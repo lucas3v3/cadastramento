@@ -18,7 +18,7 @@ self.addEventListener('install', event => {
 		caches
 			.open(CACHE_NAME)
 			.then(cache => cache.addAll(ASSETS))
-			.catch(err => console.log(err));
+			.catch(err => console.log(err))
 	);
 }); 
 
@@ -42,7 +42,7 @@ self.addEventListener('activate', event => {
       return Promise.all(keyList.map((key, i) => {
         if (cacheWhitelist.indexOf(key) === -1) {
           console.log('Apagando cache: ' + keyList[i]);
-          return caches.delete(keyList[i])
+          return caches.delete(keyList[i]);
         }
       }))
     })

@@ -5,11 +5,8 @@ var CACHE_NAME = APP_PREFIX + VERSION;
 var ASSETS = [    
   `${PATH}/manifest.webmanifest`,
   `${PATH}/js/jquery-3.6.1.js`,
-  `${PATH}/js/jquery.mobile-1.4.5.js`,
   `${PATH}/js/app.js`,
-  `${PATH}/css/jquery.mobile-1.4.5.min.css`,
-  `${PATH}/css/jquery.mobile.icons-1.4.5.min.css`,
-  `${PATH}/css/jquery.mobile.theme-1.4.5.min.css`,
+  `${PATH}/css/bulma.min.css`,
   `${PATH}/img/icon.png`,
   `${PATH}/index.html`,
   `${PATH}/`

@@ -1,6 +1,6 @@
 var PATH = '/cadastramento';
 var APP_PREFIX = '3v3cad';
-var VERSION = 'v20220930.2';
+var VERSION = 'v20220930.3';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var ASSETS = [    
   `${PATH}/manifest.webmanifest`,

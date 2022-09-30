@@ -34,20 +34,18 @@ self.addEventListener('fetch', event => {
 	);
 });
 
-/* self.addEventListener('activate', event => {
+self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keyList => {
-      var cacheWhitelist = keyList.filter(key => {
-        return key.indexOf(APP_PREFIX)
-      })
+      var cacheWhitelist = keyList.filter(key => key.indexOf(APP_PREFIX));
       cacheWhitelist.push(CACHE_NAME);
       return Promise.all(keyList.map((key, i) => {
         if (cacheWhitelist.indexOf(key) === -1) {
-          console.log('Apagando o cache: ' + keyList[i] );
+          console.log('Apagando cache: ' + keyList[i]);
           return caches.delete(keyList[i])
         }
       }))
     })
   )
-}) */
+})
 

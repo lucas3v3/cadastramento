@@ -1,6 +1,6 @@
 var PATH = '/cadastramento';
 var APP_PREFIX = '3V3-CAD';
-var VERSION = 'v20220930.4';
+var VERSION = 'v20220930.5';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var ASSETS = [    
   `${PATH}/manifest.webmanifest`,
@@ -11,6 +11,8 @@ var ASSETS = [
   `${PATH}/index.html`,
   `${PATH}/`
 ];
+
+console.log("Versão do SW: " + VERSION);
 
 self.addEventListener('install', event => {
 	console.log('Instalando cache: ' + CACHE_NAME);

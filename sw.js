@@ -1,6 +1,6 @@
 var PATH = '/cadastramento';
 var APP_PREFIX = '3v3cad';
-var VERSION = 'v20220930.1';
+var VERSION = 'v20220930.2';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var ASSETS = [    
   `${PATH}/manifest.webmanifest`,
@@ -17,9 +17,7 @@ self.addEventListener('install', event => {
 	event.waitUntil(
 		caches
 			.open(CACHE_NAME)
-			.then(cache => {
-				return cache.addAll(ASSETS);
-			})
+			.then(cache => cache.addAll(ASSETS))
 			.catch(err => console.log(err));
 	);
 }); 
@@ -30,8 +28,7 @@ self.addEventListener('fetch', event => {
 		fetch(event.request)
 			.catch(err => {
 				console.log(err);
-				caches.match(event.request)
-					.then(response => response);
+				caches.match(event.request).then(response => response);
 				console.log(event.request.url + " obtido do cache");
 			});
 	);

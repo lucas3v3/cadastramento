@@ -4,9 +4,10 @@ var VERSION = 'v20221003.1';
 var CACHE_NAME = APP_PREFIX + VERSION;
 var ASSETS = [    
   `${PATH}/manifest.webmanifest`,
-  `${PATH}/js/jquery-3.6.1.js`,
+  `${PATH}/js/jquery.slim.min.js`,
+  `${PATH}/js/bootstrap.bundle.min.js`,
   `${PATH}/js/app.js`,
-  `${PATH}/css/bulma.min.css`,
+  `${PATH}/css/bootstrap.min.css`,
   `${PATH}/img/icon.png`,
   `${PATH}/index.html`,
   `${PATH}/`

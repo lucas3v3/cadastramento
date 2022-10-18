@@ -14,6 +14,7 @@
    <link rel="shortcut icon" href="./img/icon.png"/>
    <script src="./js/jquery.slim.min.js"></script>
    <script src="./js/bootstrap.bundle.min.js"></script>
+   <script src="./js/app.js"></script>
    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
 </head>
 <body>
@@ -40,21 +41,50 @@
 			<div id="collapse01" class="collapse show" data-parent="#accordionExample">
 			  <div class="card-body">
 			  
-				<input type="checkbox">
+				<form>
+				  <div class="form-group">
+					<label for="exampleFormControlInput1">Email address</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect1">Example select</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				  </div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">Example multiple select</label>
+					<select multiple class="form-control" id="exampleFormControlSelect2">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				  </div>
+				  <div class="form-group">
+					<label for="exampleFormControlTextarea1">Example textarea</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				  </div>
+				</form>		
 				
 			  </div>
 			</div>
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingTwo">
+			<div class="card-header" id="heading02">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse02">
 				  Identificação da Pessoa Jurídica
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+			<div id="collapse02" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
 				Some placeholder content for the second accordion panel. This panel is hidden by default.
 			  </div>
@@ -62,14 +92,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingThree">
+			<div class="card-header" id="heading03">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse03">
 				  Identificação da Pessoa Física
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseThree" class="collapse" data-parent="#accordionExample">
+			<div id="collapse03" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -77,14 +107,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingFour">
+			<div class="card-header" id="heading04">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse04">
 				  Identificação do Recurso Hídrico
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseFour" class="collapse" data-parent="#accordionExample">
+			<div id="collapse04" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -92,14 +122,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingFive">
+			<div class="card-header" id="heading05">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse05">
 				  Dados da Captação Subterrânea
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseFive" class="collapse" data-parent="#accordionExample">
+			<div id="collapse05" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -107,14 +137,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingSix">
+			<div class="card-header" id="heading06">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse06">
 				  Dados da Captação Superficial
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseSix" class="collapse" data-parent="#accordionExample">
+			<div id="collapse06" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -122,14 +152,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingThree">
+			<div class="card-header" id="heading07">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse07">
 				  Características Construtivas do Poço Tubular 
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+			<div id="collapse07" class="collapse" aria-labelledby="heading07" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -137,14 +167,14 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingThree">
+			<div class="card-header" id="heading08">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse08">
 				  Informações de Finalidade
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+			<div id="collapse08" class="collapse" aria-labelledby="heading08" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
@@ -152,23 +182,25 @@
 		  </div>
 		  <!-- ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="headingThree">
+			<div class="card-header" id="heading09">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse09">
 				  Responsável pelas Informações
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+			<div id="collapse09" class="collapse" aria-labelledby="heading09" data-parent="#accordionExample">
 			  <div class="card-body">
 				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
 			  </div>
 			</div>
 		  </div>
-		  
-		  
-		  
 		</div>
+		
+		<br>		
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="exportJSON(this)">Submeter pesquisa</button>
+		<br>
+		
 	</div>
 	
 </body>

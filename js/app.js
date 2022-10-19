@@ -52,7 +52,8 @@ const get_responses = () => {
 		"C0006": $("#C0006").val(),
 		"C0007": $("#C0007").val(),
 	}
-	return JSON.stringify(response);
+	/* return JSON.stringify(response); */
+	return response;
 }
 
 const get_file_name = () => {
@@ -64,7 +65,7 @@ const get_file_name = () => {
 			+ today.getHours() 
 			+ today.getMinutes() 
 			+ today.getSeconds()
-			+ ".json";
+			+ ".txt";
 }
 
 const download = () => {
@@ -91,12 +92,10 @@ const download = () => {
 	navigator.share(shareData);
 } */
 
-const share = () => {
+const share = async () => {
 	const content = get_responses();
 	const file_name = get_file_name();
-    const blob = new Blob([content],
-    { type: 'text/json;charset=UTF-8' });
-	const file = new File([blob], file_name, {type: 'text/json'});
+	const file = new File([content], file_name, {type: 'text/plain'});
 	navigator.share({
 			title: file_name,
 			files: [file]

@@ -52,8 +52,7 @@ const get_responses = () => {
 		"C0006": $("#C0006").val(),
 		"C0007": $("#C0007").val(),
 	}
-	/* return JSON.stringify(response); */
-	return response;
+	return JSON.stringify(response);
 }
 
 const get_file_name = () => {

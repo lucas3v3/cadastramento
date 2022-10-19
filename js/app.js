@@ -94,8 +94,9 @@ const download = () => {
 const share = () => {
 	const content = get_responses();
 	const file_name = get_file_name();
-    const file = new Blob([content],
+    const blob = new Blob([content],
     { type: 'text/json;charset=UTF-8' });
+	const file = new File([blob], file_name, {type: 'text/json'});
 	navigator.share({
 			title: file_name,
 			files: [file]

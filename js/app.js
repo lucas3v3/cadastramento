@@ -85,3 +85,8 @@ const download = () => {
     }
     reader.readAsDataURL(file);
 }
+
+const share = () => {
+	let shareData = { text: get_responses() }
+	navigator.share(shareData);
+}

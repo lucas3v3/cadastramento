@@ -2,20 +2,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--   <title>CAD - 3v3 Tecnologia</title>
+  <title>CAD - 3v3 Tecnologia</title>
   <link rel="canonical" href="https://lucas3v3.github.io/cadastramento/"/>
   <link rel="manifest" href="/cadastramento/manifest.webmanifest"/>
   <link rel="shortcut icon" href="/cadastramento/img/icon.png"/>
   <script src="/cadastramento/js/jquery.slim.min.js"></script>
   <script src="/cadastramento/js/bootstrap.bundle.min.js"></script>
   <script src="/cadastramento/js/app.js"></script>
-  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css"/> -->
-   <title>CAD - 3v3 Tecnologia LOCAL</title>
+  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css"/>
+   <!-- <title>CAD - 3v3 Tecnologia LOCAL</title>
    <link rel="shortcut icon" href="./img/icon.png"/>
    <script src="./js/jquery.slim.min.js"></script>
    <script src="./js/bootstrap.bundle.min.js"></script>
    <script src="./js/app.js"></script>
-   <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="./css/bootstrap.min.css"/> -->
 </head>
 <body>
 
@@ -29,83 +29,183 @@
 	<div class="container">
 		
 		<div class="accordion" id="accordionExample">
-		  <!-- ------------------------------ -->
+		  <!-- A ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="heading01">
+			<div class="card-header" id="headingA">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse01">
+				<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseA">
 				  Informações gerais
 				</button>
 			  </h2>
 			</div>
-			<div id="collapse01" class="collapse show" data-parent="#accordionExample">
+			<div id="collapseA" class="collapse show" data-parent="#accordionExample">
 			  <div class="card-body">
-			  
 				<form>
 				  <div class="form-group">
-					<label for="exampleFormControlInput1">Email address</label>
-					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+					<label for="A0000">Nome do cadastrador</label>
+					<input type="text" class="form-control" id="A0000" placeholder="">
 				  </div>
 				  <div class="form-group">
-					<label for="exampleFormControlSelect1">Example select</label>
-					<select class="form-control" id="exampleFormControlSelect1">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
+					<label for="A0100">Tipo do cadastro</label>
+					<select class="form-control" id="A0100">
+					  <option>Pessoa física</option>
+					  <option>Pessoa jurídica</option>
 					</select>
-				  </div>
-				  <div class="form-group">
-					<label for="exampleFormControlSelect2">Example multiple select</label>
-					<select multiple class="form-control" id="exampleFormControlSelect2">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				  </div>
-				  <div class="form-group">
-					<label for="exampleFormControlTextarea1">Example textarea</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 				  </div>
 				</form>		
-				
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- B ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="heading02">
+			<div class="card-header" id="headingB">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse02">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseB">
 				  Identificação da Pessoa Jurídica
 				</button>
 			  </h2>
 			</div>
-			<div id="collapse02" class="collapse" data-parent="#accordionExample">
+			<div id="collapseB" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
-				Some placeholder content for the second accordion panel. This panel is hidden by default.
+				<form>
+				  <div class="form-group">
+					<label for="B0000">Nome ou Razão Social</label>
+					<input type="text" class="form-control" id="B0000" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0001">Inscrição Estadual do Empreendimento</label>
+					<input type="text" class="form-control" id="B0001" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0002">Nome Fantasia</label>
+					<input type="text" class="form-control" id="B0002" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0003">CNAE da Atividade Principal</label>
+					<input type="number" class="form-control" id="B0003" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0004">Endereço</label>
+					<input type="text" class="form-control" id="B0004" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0005">Complemento</label>
+					<input type="text" class="form-control" id="B0005" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0008">Número</label>
+					<input type="number" class="form-control" id="B0008" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0009">Bairro/CEP</label>
+					<input type="text" class="form-control" id="B0009" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0006">E-mail</label>
+					<input type="email" class="form-control" id="B0006" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0007">Município/UF</label>
+					<input type="text" class="form-control" id="B0007" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0010">Telefone</label>
+					<input type="number" class="form-control" id="B0010" placeholder="">
+				  </div>
+				  <hr><h4>Tipo de Empreendimento</h4>
+				  <div class="form-group">
+					<label for="B0100"></label>
+					<select class="form-control" id="B0100">
+					  <option>Administração Pública</option>
+					  <option>Agropecuária</option>
+					  <option>Indústria</option>
+					  <option>Comércio e Serviços</option>
+					  <option>Saneamento</option>
+					</select>
+					<input type="text" class="form-control" id="B0101" placeholder="Outros">
+				  </div>
+				  <hr><h4>Contato para Correspondência</h4>
+				  <div class="form-group">
+					<label for="B0200">Nome ou Razão Social</label>
+					<input type="text" class="form-control" id="B0200" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0201">Endereço</label>
+					<input type="text" class="form-control" id="B0201" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0202">Complemento</label>
+					<input type="text" class="form-control" id="B0202" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0203">E-mail</label>
+					<input type="email" class="form-control" id="B0203" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0204">Número</label>
+					<input type="number" class="form-control" id="B0204" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0205">Bairro</label>
+					<input type="text" class="form-control" id="B0205" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="B0206">Município</label>
+					<input type="text" class="form-control" id="B0206" placeholder="">
+				  </div>
+				</form>		
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- C ------------------------------ -->
 		  <div class="card">
-			<div class="card-header" id="heading03">
+			<div class="card-header" id="headingC">
 			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse03">
+				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseC">
 				  Identificação da Pessoa Física
 				</button>
 			  </h2>
 			</div>
-			<div id="collapse03" class="collapse" data-parent="#accordionExample">
+			<div id="collapseC" class="collapse" data-parent="#accordionExample">
 			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+				<form>
+				<div class="form-group">
+					<label for="C0000">Nome</label>
+					<input type="text" class="form-control" id="C0000" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0001">Endereço</label>
+					<input type="text" class="form-control" id="C0001" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0002">Função/Cargo</label>
+					<input type="text" class="form-control" id="C0002" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0003">E-mail</label>
+					<input type="email" class="form-control" id="C0003" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0004">CPF</label>
+					<input type="number" class="form-control" id="C0004" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0005">RG</label>
+					<input type="number" class="form-control" id="C0005" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0006">Celular</label>
+					<input type="number" class="form-control" id="C0006" placeholder="">
+				  </div>
+				  <div class="form-group">
+					<label for="C0007">Município</label>
+					<input type="text" class="form-control" id="C0007" placeholder="">
+				  </div>
+				</form>
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- D ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading04">
 			  <h2 class="mb-0">
@@ -120,7 +220,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- E ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading05">
 			  <h2 class="mb-0">
@@ -135,7 +235,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- F ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading06">
 			  <h2 class="mb-0">
@@ -150,7 +250,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- G ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading07">
 			  <h2 class="mb-0">
@@ -165,7 +265,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- H ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading08">
 			  <h2 class="mb-0">
@@ -180,7 +280,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <!-- ------------------------------ -->
+		  <!-- I ------------------------------ -->
 		  <div class="card">
 			<div class="card-header" id="heading09">
 			  <h2 class="mb-0">
@@ -198,7 +298,7 @@
 		</div>
 		
 		<br>		
-		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="exportJSON(this)">Submeter pesquisa</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="download()">Submeter pesquisa</button>
 		<br>
 		
 	</div>

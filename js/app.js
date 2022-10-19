@@ -1,20 +1,9 @@
-/* if (navigator.serviceWorker) {
+if (navigator.serviceWorker) {
     navigator.serviceWorker.register (
         '/cadastramento/sw.js',
         { scope: '/cadastramento/' }
     ).then(() => console.log("Service Worker registrado"));
-} */
-
-/* const exportJSON = el => {
-	const response = {
-		"select": $("#exampleFormControlSelect1").val()
-	}
-	const response_json = encodeURIComponent(JSON.stringify(response)); 
-	const data = `text/json;charset=utf-8,${response_json}`;
-	console.log(JSON.stringify(response));
-	el.setAttribute("href", `data:${data}`);
-	el.setAttribute("download", "data.json");
-} */
+}
 
 const get_responses = () => {
 	const response = {
@@ -66,30 +55,6 @@ const get_file_name = () => {
 			+ today.getSeconds()
 			+ ".txt";
 }
-
-const download = () => {
-	const content = get_responses();
-	const file_name = get_file_name();
-    const file = new Blob([content],
-    {
-        type: 'text/json;charset=UTF-8'
-    });
-    const reader = new FileReader();
-    reader.onload = () => {
-        const popup = window.open();
-        const link = document.createElement('a');
-        link.setAttribute('href', reader.result);
-        link.setAttribute('download', file_name);
-        popup.document.body.appendChild(link);
-        link.click();
-    }
-    reader.readAsDataURL(file);
-}
-
-/* const share = () => {
-	let shareData = { text: get_responses() }
-	navigator.share(shareData);
-} */
 
 const share = async () => {
 	const content = get_responses();

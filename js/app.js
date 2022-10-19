@@ -86,7 +86,21 @@ const download = () => {
     reader.readAsDataURL(file);
 }
 
-const share = () => {
+/* const share = () => {
 	let shareData = { text: get_responses() }
 	navigator.share(shareData);
+} */
+
+const share = () => {
+	const data = get_responses();
+	const file_name = get_file_name();
+	const file = new File(data, file_name, { type: "text/json" });
+	try {
+		await navigator.share({
+			title: get_file_name(),
+			files: [file]
+		});
+	} catch (err) {
+		alert(err.message);
+	}
 }

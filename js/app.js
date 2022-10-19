@@ -91,19 +91,13 @@ const download = () => {
 	navigator.share(shareData);
 } */
 
-const share = async () => {
+const share = () => {
 	const content = get_responses();
 	const file_name = get_file_name();
     const file = new Blob([content],
-    {
-        type: 'text/json;charset=UTF-8'
-    });
-	try {
-		await navigator.share({
+    { type: 'text/json;charset=UTF-8' });
+	navigator.share({
 			title: file_name,
 			files: [file]
-		});
-	} catch (err) {
-		alert(err.message);
-	}
+	});
 }

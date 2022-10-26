@@ -1,307 +1,1641 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CAD - 3v3 Tecnologia</title>
-  <link rel="canonical" href="https://lucas3v3.github.io/cadastramento/"/>
-  <link rel="manifest" href="/cadastramento/manifest.webmanifest"/>
-  <link rel="shortcut icon" href="/cadastramento/img/icon.png"/>
+  <link rel="canonical" href="https://lucas3v3.github.io/cadastramento/" />
+  <link rel="manifest" href="/cadastramento/manifest.webmanifest" />
+  <link rel="shortcut icon" href="/cadastramento/img/icon.png" />
   <script src="/cadastramento/js/jquery.slim.min.js"></script>
   <script src="/cadastramento/js/bootstrap.bundle.min.js"></script>
   <script src="/cadastramento/js/app.js"></script>
-  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css"/>
-   <!-- <title>CAD - 3v3 Tecnologia LOCAL</title>
-   <link rel="shortcut icon" href="./img/icon.png"/>
-   <script src="./js/jquery.slim.min.js"></script>
-   <script src="./js/bootstrap.bundle.min.js"></script>
-   <script src="./js/app.js"></script>
-   <link rel="stylesheet" href="./css/bootstrap.min.css"/> -->
+  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css" />
+  <!-- <title>CAD - 3v3 Tecnologia LOCAL</title>
+  <link rel="shortcut icon" href="./img/icon.png" />
+  <script src="./js/jquery.slim.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
 </head>
 <body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-5">3V3 TECNOLOGIA</h1>
+      <p class="lead">
+        FORMULÁRIO PARA CADASTRO DOS USUÁRIOS DE RECURSOS HÍDRICOS
+      </p>
+    </div>
+  </div>
 
-	<div class="jumbotron jumbotron-fluid">
-	  <div class="container">
-		<h1 class="display-5">3V3 TECNOLOGIA</h1>
-		<p class="lead">FORMULÁRIO PARA CADASTRO DOS USUÁRIOS DE RECURSOS HÍDRICOS</p>
-	  </div>
-	</div>
+  <div class="container">
+    <div class="accordion" id="accordionExample">
+      <!-- A ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="headingA">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseA"
+            >
+              Informações gerais
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseA"
+          class="collapse show"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="A0000">Nome do cadastrador</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="A0000"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="A0100">Tipo do cadastro</label>
+                <select class="form-control" id="A0100">
+                  <option></option>
+                  <option>Pessoa física</option>
+                  <option>Pessoa jurídica</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- B ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="headingB">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseB"
+            >
+              Identificação da Pessoa Jurídica
+            </button>
+          </h2>
+        </div>
+        <div id="collapseB" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="B0000">Nome ou Razão Social</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0000"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0001">Inscrição Estadual do Empreendimento</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0001"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0002">Nome Fantasia</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0002"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0003">CNAE da Atividade Principal</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="B0003"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0004">Endereço</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0004"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0005">Complemento</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0005"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0008">Número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="B0008"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0009">Bairro/CEP</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0009"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0006">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="B0006"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0007">Município/UF</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0007"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0010">Telefone</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="B0010"
+                  placeholder=""
+                />
+              </div>
+              <hr />
+              <h4>Tipo de Empreendimento</h4>
+              <div class="form-group">
+                <label for="B0100"></label>
+                <select class="form-control" id="B0100">
+                  <option></option>
+                  <option>Administração Pública</option>
+                  <option>Agropecuária</option>
+                  <option>Indústria</option>
+                  <option>Comércio e Serviços</option>
+                  <option>Saneamento</option>
+                </select>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0101"
+                  placeholder="Outros?"
+                />
+              </div>
+              <hr />
+              <h4>Contato para Correspondência</h4>
+              <div class="form-group">
+                <label for="B0200">Nome ou Razão Social</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0200"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0201">Endereço</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0201"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0202">Complemento</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0202"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0203">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="B0203"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0204">Número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="B0204"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0205">Bairro</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0205"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="B0206">Município</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="B0206"
+                  placeholder=""
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- C ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="headingC">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseC"
+            >
+              Identificação da Pessoa Física
+            </button>
+          </h2>
+        </div>
+        <div id="collapseC" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="C0000">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="C0000"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0001">Endereço</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="C0001"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0002">Função/Cargo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="C0002"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0003">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="C0003"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0004">CPF</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="C0004"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0005">RG</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="C0005"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0006">Celular</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="C0006"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="C0007">Município</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="C0007"
+                  placeholder=""
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- D ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="headingD">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseD"
+            >
+              Identificação do Recurso Hídrico
+            </button>
+          </h2>
+        </div>
+        <div id="collapseD" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="D0000">Nome do Manancial</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0000"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="D0001">Município</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0001"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="D0002">Outorga</label>
+                <select class="form-control" id="D0002">
+                  <option></option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="D0003">Nº</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0003"
+                  placeholder=""
+                />
+              </div>
+              <h4>Subterrâneo</h4>
+              <div class="form-group">
+                <label for="D0004"></label>
+                <select class="form-control" id="D0004">
+                  <option></option>
+                  <option>Cacimba ou Poço</option>
+                  <option>Poço tubular</option>
+                </select>
+              </div>
+              <div class="form-group input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="D0005"
+                  placeholder="Profundidade"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">m</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="D0006">Nº da LAU do Poço tubular (se houver)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="D0006"
+                  placeholder=""
+                />
+              </div>
+              <h4>Superficial</h4>
+              <div class="form-group">
+                <label for="D0007">Mina ou nascente</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0007"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="D0008">Rio, córrego ou lago</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0008"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="D0009">Bacia hidrográfica</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="D0009"
+                  placeholder=""
+                />
+              </div>
+              <hr />
+              <h4>Coordenadas do ponto de captação/lançamento</h4>
+              <div class="form-group input-group">
+                <label for="D0100">Geográficas</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0100"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">Latitude</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0101"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">Longitude</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="D0102">UTM</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0102"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">Norte</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0103"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">Leste</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="D0104">DATUM</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0104"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">SIRGAS 2000</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0105"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">WGS 84</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- E ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="heading05">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse05"
+            >
+              Dados da Captação Subterrânea
+            </button>
+          </h2>
+        </div>
+        <div id="collapse05" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            And lastly, the placeholder content for the third and final
+            accordion panel. This panel is hidden by default.
+          </div>
+        </div>
+      </div>
+      <!-- F ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="heading06">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse06"
+            >
+              Dados da Captação Superficial
+            </button>
+          </h2>
+        </div>
+        <div id="collapse06" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            And lastly, the placeholder content for the third and final
+            accordion panel. This panel is hidden by default.
+          </div>
+        </div>
+      </div>
+      <!-- G ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="headingG">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseG"
+            >
+              Características Construtivas do Poço Tubular
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseG"
+          class="collapse"
+          aria-labelledby="headingG"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <form>
+              <h4>Contratação da Empresa</h4>
+              <div class="form-group">
+                <label for="G0001">Empresa perfuradora</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0001"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="G0000">
+                  <option></option>
+                  <option>Identificada</option>
+                  <option>Não identificada</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="G0002">CNPJ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0002"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="G0003">Endereço</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0003"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="G0004">Responsável técnico</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0004"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0006" />
+                  <label class="form-check-label" for="G0006">
+                    Não identificado
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0005">CREA</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0005"
+                  placeholder=""
+                />
+              </div>
+              <hr />
+              <h4>Características do Poço</h4>
+              <div class="form-group">
+                <label for="G0100">Natureza do Poço</label>
+                <select class="form-control" id="G0100">
+                  <option></option>
+                  <option>Piezométrico</option>
+                  <option>Poço Tubular</option>
+                  <option>Poço Pinteira</option>
+                  <option>Poço de Monitoramento</option>
+                  <option>Poço Escavado-Cacimba</option>
+                  <option>Poço Coletor</option>
+                </select>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0101">Profundidade do poço</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0101"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0102">Altura da boca do poço</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0102"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0103">Diâmetro de perfuração</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0103"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">pol</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0104">De</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0104"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0105">Até</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0105"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0106">Data de instalação do Poço</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="G0106"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0107" />
+                  <label class="form-check-label" for="G0107">
+                    Desconhecida
+                  </label>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0108">Cota do Terreno</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0108"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0109" />
+                  <label class="form-check-label" for="G0109">
+                    Desconhecida
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0110">Filtro</label>
+                <select class="form-control" id="G0110">
+                  <option></option>
+                  <option>Plástico geomecânico</option>
+                  <option>Plástico geomecânico reforçado</option>
+                  <option>Estampado galvanizado</option>
+                  <option>Tubo ranhura</option>
+                  <option>Espiral inox</option>
+                  <option>Espiral galvanizado</option>
+                  <option>Estampado</option>
+                  <option>PVC</option>
+                  <option>Sem filtro</option>
+                </select>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0111">Revestimento (diâmetro do tubo)</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0111"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">pol</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0112">Revestimento</label>
+                <select class="form-control" id="G0112">
+                  <option></option>
+                  <option>Aço preto</option>
+                  <option>Aço inox</option>
+                  <option>Aço sem costura</option>
+                  <option>Aço com costura</option>
+                  <option>Plástico PVC</option>
+                  <option>PVC</option>
+                  <option>Galvanizado</option>
+                  <option>Plástico geomecânico</option>
+                  <option>Tubos de concreto</option>
+                  <option>Espiralado perfil</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="G0113">Acabamento</label>
+                <select class="form-control" id="G0113">
+                  <option></option>
+                  <option>
+                    Equipamentos de medição de volume extraído - hidrômetro
+                  </option>
+                  <option>Dispositivo para coleta de amostra da água</option>
+                  <option>Tubo auxiliar de medição de nível</option>
+                  <option>Laje de proteção</option>
+                  <option>Nenhum identificado</option>
+                </select>
+              </div>
+              <hr />
+              <h4>Dados operacionais</h4>
+              <div class="form-group">
+                <label for="G0200">Operação</label>
+                <select class="form-control" id="G0200">
+                  <option></option>
+                  <option>Ativo (bombeando)</option>
+                  <option>Desativado com equipamento</option>
+                  <option>Não utilizável</option>
+                  <option>Fechado</option>
+                  <option>Abandonado</option>
+                  <option>Colmatado</option>
+                  <option>Tamponado sem relatório</option>
+                  <option>Tamponado com relatório</option>
+                </select>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0201"
+                  placeholder="Outros?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="G0202">Instalação da bomba</label>
+                <select class="form-control" id="G0202">
+                  <option></option>
+                  <option>Submersa</option>
+                  <option>Ar comprimido</option>
+                  <option>Injetora</option>
+                  <option>Centrífuga</option>
+                </select>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0203"
+                  placeholder="Outros?"
+                />
+              </div>
+              <div class="form-group input-group">
+                <label for="G0204"
+                  >Cota da bomba de sucção ou dispositivos similares</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0204"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0205" />
+                  <label class="form-check-label" for="G0205">
+                    Não identificada
+                  </label>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0206">Crivo da bomba</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0206"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0207" />
+                  <label class="form-check-label" for="G0207">
+                    Não identificada
+                  </label>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0208">Capacidade da bomba</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0208"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">cv</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0209"
+                  >Distância da fossa/sumidouro em relação ao poço</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0209"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0300">Nível estático (NE)</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0300"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0301">Nível dinâmico (ND)</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0301"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0302">Coluna estática</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0302"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0303">Coluna dinâmica</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0303"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0304">Rebaixamento</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0304"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0305">Vazão de Estabilização</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0305"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m³/h</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0306">Base</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0306"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0307">Topo</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0307"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0308">Aquífero Explorado</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="G0308"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0309" />
+                  <label class="form-check-label" for="G0309">
+                    Teste de vazão não realizado/desconhecido
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0310">Condições do Aquífero</label>
+                <select class="form-control" id="G0310">
+                  <option></option>
+                  <option>Livre</option>
+                  <option>Semi-livre</option>
+                  <option>Confinado</option>
+                  <option>Semi-confinado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="G0311">Penetração do Aquífero</label>
+                <select class="form-control" id="G0311">
+                  <option></option>
+                  <option>Parcial</option>
+                  <option>Total</option>
+                </select>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0312">Vazão de bombeamento</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0312"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m³/h</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0313">Coeficiente de armazenamento</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0313"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">S</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0314">Vazão específica</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0314"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m³/h</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0315">Permeabilidade</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0315"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m/s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0316">Transmissibilidade</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0316"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m²/s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0317">Condutividade hidráulica</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0317"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m/s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0318"
+                  >Data de realização do teste de Bombeamento</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="G0318"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group input-group">
+                <label for="G0319"
+                  >Tempo de duração do teste de Bombeamento</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0319"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">horas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0320">Tipo de teste</label>
+                <select class="form-control" id="G0320">
+                  <option></option>
+                  <option>Contínuo</option>
+                  <option>Escalonado</option>
+                  <option>Recarga</option>
+                  <option>Rebaixamento</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0321" />
+                  <label class="form-check-label" for="G0321">
+                    Teste de bombeamento não realizado
+                  </label>
+                </div>
+              </div>
+              <hr />
+              <h4>Caracterização Hidroquímica da Água do Poço</h4>
+              <div class="form-group input-group">
+                <label for="G0323">01 - Bicarbonatos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0323"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0324">02 - Cálcio</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0324"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0325">03 - Carbonatos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0325"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0326">04 - Cloretos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0326"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0327">05 - Condutividade</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0327"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">uC/cm</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0328">06 - Dureza total</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0328"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0329">07 - Ferro total</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0329"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0330">08 - Fluoretos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0330"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0331">09 - Fosfatos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0331"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0332">10 - Magnésio</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0332"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0333">11 - Nitratos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0333"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0334">12 - Nitritos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0334"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0335">13 - pH</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="G0335"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group input-group">
+                <label for="G0336">14 - Potássio</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0336"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0337">15 - Sódio</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0337"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0338">16 - Sólidos dissolvidos totais</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0338"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0339">17 - Sulfatos</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0339"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">mg/l</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0340">18 - Turbidez</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0340"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">UT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0341">19 - Temperatura</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0341"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">C</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0342">20 - Coliformes fecais</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0342"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">NMP/100ml</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="G0343">21 - Coliformes totais</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="G0343"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">NMP/100ml</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="G0344">Data da coleta</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="G0344"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="G0345">Data da análise</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="G0345"
+                  placeholder=""
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- H ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="heading08">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse08"
+            >
+              Informações de Finalidade
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse08"
+          class="collapse"
+          aria-labelledby="heading08"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            And lastly, the placeholder content for the third and final
+            accordion panel. This panel is hidden by default.
+          </div>
+        </div>
+      </div>
+      <!-- I ------------------------------ -->
+      <div class="card">
+        <div class="card-header" id="heading09">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse09"
+            >
+              Responsável pelas Informações
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse09"
+          class="collapse"
+          aria-labelledby="heading09"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            And lastly, the placeholder content for the third and final
+            accordion panel. This panel is hidden by default.
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div class="container">
-		
-		<div class="accordion" id="accordionExample">
-		  <!-- A ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="headingA">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseA">
-				  Informações gerais
-				</button>
-			  </h2>
-			</div>
-			<div id="collapseA" class="collapse show" data-parent="#accordionExample">
-			  <div class="card-body">
-				<form>
-				  <div class="form-group">
-					<label for="A0000">Nome do cadastrador</label>
-					<input type="text" class="form-control" id="A0000" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="A0100">Tipo do cadastro</label>
-					<select class="form-control" id="A0100">
-					  <option>Pessoa física</option>
-					  <option>Pessoa jurídica</option>
-					</select>
-				  </div>
-				</form>		
-			  </div>
-			</div>
-		  </div>
-		  <!-- B ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="headingB">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseB">
-				  Identificação da Pessoa Jurídica
-				</button>
-			  </h2>
-			</div>
-			<div id="collapseB" class="collapse" data-parent="#accordionExample">
-			  <div class="card-body">
-				<form>
-				  <div class="form-group">
-					<label for="B0000">Nome ou Razão Social</label>
-					<input type="text" class="form-control" id="B0000" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0001">Inscrição Estadual do Empreendimento</label>
-					<input type="text" class="form-control" id="B0001" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0002">Nome Fantasia</label>
-					<input type="text" class="form-control" id="B0002" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0003">CNAE da Atividade Principal</label>
-					<input type="number" class="form-control" id="B0003" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0004">Endereço</label>
-					<input type="text" class="form-control" id="B0004" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0005">Complemento</label>
-					<input type="text" class="form-control" id="B0005" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0008">Número</label>
-					<input type="number" class="form-control" id="B0008" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0009">Bairro/CEP</label>
-					<input type="text" class="form-control" id="B0009" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0006">E-mail</label>
-					<input type="email" class="form-control" id="B0006" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0007">Município/UF</label>
-					<input type="text" class="form-control" id="B0007" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0010">Telefone</label>
-					<input type="number" class="form-control" id="B0010" placeholder="">
-				  </div>
-				  <hr><h4>Tipo de Empreendimento</h4>
-				  <div class="form-group">
-					<label for="B0100"></label>
-					<select class="form-control" id="B0100">
-					  <option>Administração Pública</option>
-					  <option>Agropecuária</option>
-					  <option>Indústria</option>
-					  <option>Comércio e Serviços</option>
-					  <option>Saneamento</option>
-					</select>
-					<input type="text" class="form-control" id="B0101" placeholder="Outros">
-				  </div>
-				  <hr><h4>Contato para Correspondência</h4>
-				  <div class="form-group">
-					<label for="B0200">Nome ou Razão Social</label>
-					<input type="text" class="form-control" id="B0200" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0201">Endereço</label>
-					<input type="text" class="form-control" id="B0201" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0202">Complemento</label>
-					<input type="text" class="form-control" id="B0202" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0203">E-mail</label>
-					<input type="email" class="form-control" id="B0203" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0204">Número</label>
-					<input type="number" class="form-control" id="B0204" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0205">Bairro</label>
-					<input type="text" class="form-control" id="B0205" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="B0206">Município</label>
-					<input type="text" class="form-control" id="B0206" placeholder="">
-				  </div>
-				</form>		
-			  </div>
-			</div>
-		  </div>
-		  <!-- C ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="headingC">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseC">
-				  Identificação da Pessoa Física
-				</button>
-			  </h2>
-			</div>
-			<div id="collapseC" class="collapse" data-parent="#accordionExample">
-			  <div class="card-body">
-				<form>
-				<div class="form-group">
-					<label for="C0000">Nome</label>
-					<input type="text" class="form-control" id="C0000" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0001">Endereço</label>
-					<input type="text" class="form-control" id="C0001" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0002">Função/Cargo</label>
-					<input type="text" class="form-control" id="C0002" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0003">E-mail</label>
-					<input type="email" class="form-control" id="C0003" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0004">CPF</label>
-					<input type="number" class="form-control" id="C0004" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0005">RG</label>
-					<input type="number" class="form-control" id="C0005" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0006">Celular</label>
-					<input type="number" class="form-control" id="C0006" placeholder="">
-				  </div>
-				  <div class="form-group">
-					<label for="C0007">Município</label>
-					<input type="text" class="form-control" id="C0007" placeholder="">
-				  </div>
-				</form>
-			  </div>
-			</div>
-		  </div>
-		  <!-- D ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading04">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse04">
-				  Identificação do Recurso Hídrico
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse04" class="collapse" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		  <!-- E ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading05">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse05">
-				  Dados da Captação Subterrânea
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse05" class="collapse" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		  <!-- F ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading06">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse06">
-				  Dados da Captação Superficial
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse06" class="collapse" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		  <!-- G ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading07">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse07">
-				  Características Construtivas do Poço Tubular 
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse07" class="collapse" aria-labelledby="heading07" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		  <!-- H ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading08">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse08">
-				  Informações de Finalidade
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse08" class="collapse" aria-labelledby="heading08" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		  <!-- I ------------------------------ -->
-		  <div class="card">
-			<div class="card-header" id="heading09">
-			  <h2 class="mb-0">
-				<button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse09">
-				  Responsável pelas Informações
-				</button>
-			  </h2>
-			</div>
-			<div id="collapse09" class="collapse" aria-labelledby="heading09" data-parent="#accordionExample">
-			  <div class="card-body">
-				And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-			  </div>
-			</div>
-		  </div>
-		</div>
-		
-		<br>		
-		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="share()">Submeter pesquisa</button>
-		<br>
-		
-	</div>
-	
+    <br />
+    <button
+      type="button"
+      class="btn btn-primary btn-lg btn-block"
+      onclick="share()"
+    >
+      Submeter pesquisa
+    </button>
+    <br />
+  </div>
 </body>
-</html>
+<!-- </html> -->

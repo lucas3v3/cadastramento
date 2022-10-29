@@ -1,8 +1,8 @@
-if (navigator.serviceWorker) {
-  navigator.serviceWorker
-    .register("/cadastramento/sw.js", { scope: "/cadastramento/" })
-    .then(() => console.log("Service Worker registrado"));
-}
+// if (navigator.serviceWorker) {
+//   navigator.serviceWorker
+//     .register("/cadastramento/sw.js", { scope: "/cadastramento/" })
+//     .then(() => console.log("Service Worker registrado"));
+// }
 
 const get_responses = () => {
   const response = {
@@ -139,6 +139,77 @@ const get_responses = () => {
     G0344: $("#G0344").val(),
     G0345: $("#G0345").val(),
     //H
+    H0000: $("#H0000").val(),
+    H0001: $("#H0001").val(),
+    H0002: $("#H0002").val(),
+    // H0003: $("#H0003").val(),
+    H0100: $("#H0100").val(),
+    H0101: $("#H0101").val(),
+    H0102: $("#H0102").val(),
+    H0103: $("#H0103").val(),
+    H0104: $("#H0104").val(),
+    H0105: $("#H0105").val(),
+    H0106: $("#H0106").val(),
+    H0107: $("#H0107").val(),
+    H0108: $("#H0108").val(),
+    H0109: $("#H0109").val(),
+    H0110: $("#H0110").val(),
+    H0200: $("#H0200").val(),
+    H0201: $("#H0201").val(),
+    H0202: $("#H0202").val(),
+    H0203: $("#H0203").val(),
+    H0400: $("#H0400").val(),
+    H0401: $("#H0401").val(),
+    H0402: $("#H0402").val(),
+    H0403: $("#H0403").val(),
+    H0404: $("#H0404").val(),
+    H0405: $("#H0405").val(),
+    H0406: $("#H0406").val(),
+    H0407: $("#H0407").val(),
+    H0408: $("#H0408").val(),
+    H0409: $("#H0409").val(),
+    H0410: $("#H0410").val(),
+    H0600: $("#H0600").val(),
+    H0601: $("#H0601").val(),
+    H0602: $("#H0602").val(),
+    H0603: $("#H0603").val(),
+    H0604: $("#H0604").val(),
+    H0605: $("#H0605").val(),
+    H0700: $("#H0700").val(),
+    H0701: $("#H0701").val(),
+    H0702: $("#H0702").val(),
+    H0703: $("#H0703").val(),
+    H0704: $("#H0704").val(),
+    H0705: $("#H0705").val(),
+    H0706: $("#H0706").val(),
+    H0800: $("#H0800").val(),
+    H0801: $("#H0801").val(),
+    H0802: $("#H0802").val(),
+    H0803: $("#H0803").val(),
+    H0900: $("#H0900").val(),
+    H0901: $("#H0901").val(),
+    H0902: $("#H0902").val(),
+    H0903: $("#H0903").val(),
+    H0904: $("#H0904").val(),
+    H0905: $("#H0905").val(),
+    H0906: $("#H0906").val(),
+    H0907: $("#H0907").val(),
+    H0908: $("#H0908").val(),
+    H1000: $("#H1000").val(),
+    H1001: $("#H1001").val(),
+    H1100: $("#H1100").val(),
+    H1101: $("#H1101").val(),
+    H1200: $("#H1200").val(),
+    H1300: $("#H1300").val(),
+    H1400: $("#H1400").val(),
+    H1500: $("#H1500").val(),
+    H1501: $("#H1501").val(),
+    //I
+    I0000: $("#I0000").val(),
+    I0001: $("#I0001").val(),
+    I0002: $("#I0002").val(),
+    I0003: $("#I0003").val(),
+    I0004: $("#I0004").val(),
   };
   return JSON.stringify(response);
 };

@@ -1,8 +1,8 @@
-var PATH = "/cadastramento";
-var APP_PREFIX = "3V3-CAD";
-var VERSION = "v20221026.1";
-var CACHE_NAME = APP_PREFIX + VERSION;
-var ASSETS = [
+const PATH = "/cadastramento";
+const APP_PREFIX = "3V3-CAD";
+const VERSION = "v20221031.1";
+const CACHE_NAME = APP_PREFIX + VERSION;
+const ASSETS = [
   `${PATH}/manifest.webmanifest`,
   `${PATH}/js/jquery.slim.min.js`,
   `${PATH}/js/bootstrap.bundle.min.js`,

@@ -1,17 +1,17 @@
 {
   "name": "CAD - 3v3 Tecnologia",
   "short_name": "3V3CAD",
-  "description": "Cadastramento de usuários da água",
+  "description": "Cadastramento de usuários da água do Estado do Ceará",
   "scope": "/cadastramento/",
   "start_url": "/cadastramento/",
   "background_color": "#3273dc",
   "theme_color": "#3273dc",
-  "display": "standalone", 
+  "display": "standalone",
   "icons": [
-      {
-        "src": "/cadastramento/img/icon.png",
-        "type": "image/png",
-        "sizes": "256x256"
-      }
+    {
+      "src": "/cadastramento/img/icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
   ]
 }

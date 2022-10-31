@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="./img/icon.png" />
   <script src="./js/jquery.slim.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./sw.js"></script>
   <script src="./js/app.js"></script>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
 </head>
@@ -22,7 +23,8 @@
     <div class="container">
       <h1 class="display-5">3V3 TECNOLOGIA</h1>
       <p class="lead">
-        FORMULÁRIO PARA CADASTRO DOS USUÁRIOS DE RECURSOS HÍDRICOS
+        FORMULÁRIO PARA CADASTRO DOS USUÁRIOS DE RECURSOS HÍDRICOS NO ESTADO DO
+        CEARÁ
       </p>
     </div>
   </div>
@@ -49,6 +51,9 @@
           data-parent="#accordionExample"
         >
           <div class="card-body">
+            <p>Número do cadastro</p>
+            <h4 id="ID"></h4>
+            <hr />
             <form>
               <div class="form-group">
                 <label for="A0000">Nome do cadastrador</label>
@@ -565,43 +570,429 @@
       </div>
       <!-- E ------------------------------ -->
       <div class="card">
-        <div class="card-header" id="heading05">
+        <div class="card-header" id="headingE">
           <h2 class="mb-0">
             <button
               class="btn btn-link btn-block text-left collapsed"
               type="button"
               data-toggle="collapse"
-              data-target="#collapse05"
+              data-target="#collapseE"
             >
               (E) Dados da Captação Subterrânea
             </button>
           </h2>
         </div>
-        <div id="collapse05" class="collapse" data-parent="#accordionExample">
+        <div id="collapseE" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            And lastly, the placeholder content for the third and final
-            accordion panel. This panel is hidden by default.
+            <div class="table-responsive">
+              <table class="table table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Meses</th>
+                    <th scope="col">Vazão (m³/h)</th>
+                    <th scope="col">Horas/dia</th>
+                    <th scope="col">Dias/mês</th>
+                    <th scope="col">Volume (m³/mês)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Janeiro</th>
+                    <th scope="row">
+                      <input type="number" id="E0000" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0001" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0002" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0003" placeholder="Janeiro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fevereiro</th>
+                    <th scope="row">
+                      <input type="number" id="E0100" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0101" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0102" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0103" placeholder="Fevereiro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Março</th>
+                    <th scope="row">
+                      <input type="number" id="E0200" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0201" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0202" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0203" placeholder="Março" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Abril</th>
+                    <th scope="row">
+                      <input type="number" id="E0300" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0301" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0302" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0303" placeholder="Abril" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Maio</th>
+                    <th scope="row">
+                      <input type="number" id="E0400" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0401" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0402" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0403" placeholder="Maio" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Junho</th>
+                    <th scope="row">
+                      <input type="number" id="E0500" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0501" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0502" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0503" placeholder="Junho" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Julho</th>
+                    <th scope="row">
+                      <input type="number" id="E0600" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0601" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0602" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0603" placeholder="Julho" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Agosto</th>
+                    <th scope="row">
+                      <input type="number" id="E0700" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0701" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0702" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0703" placeholder="Agosto" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Setembro</th>
+                    <th scope="row">
+                      <input type="number" id="E0800" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0801" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0802" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0803" placeholder="Setembro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Outubro</th>
+                    <th scope="row">
+                      <input type="number" id="E0900" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0901" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0902" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E0903" placeholder="Outubro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Novembro</th>
+                    <th scope="row">
+                      <input type="number" id="E1000" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1001" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1002" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1003" placeholder="Novembro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dezembro</th>
+                    <th scope="row">
+                      <input type="number" id="E1100" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1101" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1102" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="E1103" placeholder="Dezembro" />
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
       <!-- F ------------------------------ -->
       <div class="card">
-        <div class="card-header" id="heading06">
+        <div class="card-header" id="headingF">
           <h2 class="mb-0">
             <button
               class="btn btn-link btn-block text-left collapsed"
               type="button"
               data-toggle="collapse"
-              data-target="#collapse06"
+              data-target="#collapseF"
             >
               (F) Dados da Captação Superficial
             </button>
           </h2>
         </div>
-        <div id="collapse06" class="collapse" data-parent="#accordionExample">
+        <div id="collapseF" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            And lastly, the placeholder content for the third and final
-            accordion panel. This panel is hidden by default.
+            <div class="table-responsive">
+              <table class="table table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Meses</th>
+                    <th scope="col">Vazão (m³/h)</th>
+                    <th scope="col">Horas/dia</th>
+                    <th scope="col">Dias/mês</th>
+                    <th scope="col">Volume (m³/mês)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Janeiro</th>
+                    <th scope="row">
+                      <input type="number" id="F0000" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0001" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0002" placeholder="Janeiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0003" placeholder="Janeiro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fevereiro</th>
+                    <th scope="row">
+                      <input type="number" id="F0100" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0101" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0102" placeholder="Fevereiro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0103" placeholder="Fevereiro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Março</th>
+                    <th scope="row">
+                      <input type="number" id="F0200" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0201" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0202" placeholder="Março" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0203" placeholder="Março" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Abril</th>
+                    <th scope="row">
+                      <input type="number" id="F0300" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0301" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0302" placeholder="Abril" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0303" placeholder="Abril" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Maio</th>
+                    <th scope="row">
+                      <input type="number" id="F0400" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0401" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0402" placeholder="Maio" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0403" placeholder="Maio" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Junho</th>
+                    <th scope="row">
+                      <input type="number" id="F0500" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0501" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0502" placeholder="Junho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0503" placeholder="Junho" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Julho</th>
+                    <th scope="row">
+                      <input type="number" id="F0600" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0601" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0602" placeholder="Julho" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0603" placeholder="Julho" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Agosto</th>
+                    <th scope="row">
+                      <input type="number" id="F0700" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0701" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0702" placeholder="Agosto" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0703" placeholder="Agosto" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Setembro</th>
+                    <th scope="row">
+                      <input type="number" id="F0800" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0801" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0802" placeholder="Setembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0803" placeholder="Setembro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Outubro</th>
+                    <th scope="row">
+                      <input type="number" id="F0900" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0901" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0902" placeholder="Outubro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F0903" placeholder="Outubro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Novembro</th>
+                    <th scope="row">
+                      <input type="number" id="F1000" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1001" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1002" placeholder="Novembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1003" placeholder="Novembro" />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dezembro</th>
+                    <th scope="row">
+                      <input type="number" id="F1100" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1101" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1102" placeholder="Dezembro" />
+                    </th>
+                    <th scope="row">
+                      <input type="number" id="F1103" placeholder="Dezembro" />
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -885,7 +1276,7 @@
                   <option>Tamponado com relatório</option>
                 </select>
               </div>
-              <div>
+              <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
@@ -903,7 +1294,7 @@
                   <option>Centrífuga</option>
                 </select>
               </div>
-              <div>
+              <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
@@ -1265,6 +1656,14 @@
               </div>
               <hr />
               <h4>Caracterização Hidroquímica da Água do Poço</h4>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="G0322" />
+                  <label class="form-check-label" for="G0322">
+                    Sem análises detectadas
+                  </label>
+                </div>
+              </div>
               <div class="form-group input-group">
                 <label for="G0323">01 - Bicarbonatos</label>
                 <div class="input-group">
@@ -1822,6 +2221,148 @@
                 </div>
               </div>
               <hr />
+              <h4>Irrigação</h4>
+              <div class="table-responsive">
+                <table class="table table-sm table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Cultura irrigada</th>
+                      <th scope="col" colspan="2">Área irrigada (ha)</th>
+                      <th scope="col">Período de cultivo (meses/ano)</th>
+                      <th scope="col">Tipo de irrigação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">a.</th>
+                      <th scope="row">
+                        <input type="text" id="H0300" placeholder="Cultura" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0301" placeholder="Total" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0302" placeholder="Por dia" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0303" placeholder="Período" />
+                      </th>
+                      <th scope="row">
+                        <input type="text" id="H0304" placeholder="Tipo" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">b.</th>
+                      <th scope="row">
+                        <input type="text" id="H0305" placeholder="Cultura" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0306" placeholder="Total" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0307" placeholder="Por dia" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0308" placeholder="Período" />
+                      </th>
+                      <th scope="row">
+                        <input type="text" id="H0309" placeholder="Tipo" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">c.</th>
+                      <th scope="row">
+                        <input type="text" id="H0310" placeholder="Cultura" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0311" placeholder="Total" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0312" placeholder="Por dia" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0313" placeholder="Período" />
+                      </th>
+                      <th scope="row">
+                        <input type="text" id="H0314" placeholder="Tipo" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">d.</th>
+                      <th scope="row">
+                        <input type="text" id="H0315" placeholder="Cultura" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0316" placeholder="Total" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0317" placeholder="Por dia" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0318" placeholder="Período" />
+                      </th>
+                      <th scope="row">
+                        <input type="text" id="H0319" placeholder="Tipo" />
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="H0320">Reservatório</label>
+                <select class="form-control" id="H0320">
+                  <option></option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="form-group input-group">
+                <label for="H0321">Área da lâmina d'água</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="H0321"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m²</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="H0322">Profundidade média</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="H0322"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group">
+                <label for="H0323"
+                  >Rentabilidade financeira/cultura/ciclo</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="H0323"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">R$</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
               <h4>Aquicultura (piscicultura, ranicultura, entre outros)</h4>
               <div class="form-group">
                 <label for="H0400">Nº de tanques</label>
@@ -1947,6 +2488,120 @@
                   </div>
                 </div>
               </div>
+              <hr />
+              <h4>Dessedentação de animais</h4>
+              <div class="table-responsive">
+                <table class="table table-sm table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tipo de criação</th>
+                      <th scope="col">Nº de cabeças/ano</th>
+                      <th scope="col">Comercialização (cabeças/ano)</th>
+                      <th scope="col">Consumo per capita (L/dia)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Aves</th>
+                      <th scope="row">
+                        <input type="number" id="H0500" placeholder="Aves" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0501" placeholder="Aves" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0502" placeholder="Aves" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Bovinos</th>
+                      <th scope="row">
+                        <input type="number" id="H0503" placeholder="Bovinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0504" placeholder="Bovinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0505" placeholder="Bovinos" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Equinos</th>
+                      <th scope="row">
+                        <input type="number" id="H0506" placeholder="Equinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0507" placeholder="Equinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0509" placeholder="Equinos" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Caprinos</th>
+                      <th scope="row">
+                        <input
+                          type="number"
+                          id="H0510"
+                          placeholder="Caprinos"
+                        />
+                      </th>
+                      <th scope="row">
+                        <input
+                          type="number"
+                          id="H0511"
+                          placeholder="Caprinos"
+                        />
+                      </th>
+                      <th scope="row">
+                        <input
+                          type="number"
+                          id="H0512"
+                          placeholder="Caprinos"
+                        />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Ovinos</th>
+                      <th scope="row">
+                        <input type="number" id="H0513" placeholder="Ovinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0514" placeholder="Ovinos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0515" placeholder="Ovinos" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Suínos</th>
+                      <th scope="row">
+                        <input type="number" id="H0516" placeholder="Suínos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0517" placeholder="Suínos" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0518" placeholder="Suínos" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="row">Outros</th>
+                      <th scope="row">
+                        <input type="number" id="H0519" placeholder="Outros" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0520" placeholder="Outros" />
+                      </th>
+                      <th scope="row">
+                        <input type="number" id="H0521" placeholder="Outros" />
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <hr />
+              <h4>Lavagem de veículo</h4>
               <div class="form-group">
                 <label for="H0600">Tratamento do efluente</label>
                 <select class="form-control" id="H0600">
@@ -2460,5 +3115,6 @@
     </button>
     <br />
   </div>
+  <div class="d-flex justify-content-center" id="VERSION"></div>
 </body>
 <!-- </html> -->

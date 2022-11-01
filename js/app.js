@@ -47,8 +47,9 @@ const mean_H0003 = () => {
 
 const get_responses = () => {
   const response = {
-    //ID
+    //ID e Versão
     ID: ID,
+    VERSION: VERSION,
     //A
     A0000: $("#A0000").val(),
     A0100: $("#A0100").val(),

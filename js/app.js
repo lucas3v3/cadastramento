@@ -8,40 +8,40 @@ const ID = Date.now();
 
 const sum_E1200 = () => {
   const sum =
-    $("#E0003").val() +
-    $("#E0103").val() +
-    $("#E0203").val() +
-    $("#E0303").val() +
-    $("#E0403").val() +
-    $("#E0503").val() +
-    $("#E0603").val() +
-    $("#E0703").val() +
-    $("#E0803").val() +
-    $("#E0903").val() +
-    $("#E1003").val() +
-    $("#E1103").val();
+    Number($("#E0003").val()) +
+    Number($("#E0103").val()) +
+    Number($("#E0203").val()) +
+    Number($("#E0303").val()) +
+    Number($("#E0403").val()) +
+    Number($("#E0503").val()) +
+    Number($("#E0603").val()) +
+    Number($("#E0703").val()) +
+    Number($("#E0803").val()) +
+    Number($("#E0903").val()) +
+    Number($("#E1003").val()) +
+    Number($("#E1103").val());
   return sum;
 };
 
 const sum_F1200 = () => {
   const sum =
-    $("#F0003").val() +
-    $("#F0103").val() +
-    $("#F0203").val() +
-    $("#F0303").val() +
-    $("#F0403").val() +
-    $("#F0503").val() +
-    $("#F0603").val() +
-    $("#F0703").val() +
-    $("#F0803").val() +
-    $("#F0903").val() +
-    $("#F1003").val() +
-    $("#F1103").val();
+    Number($("#F0003").val()) +
+    Number($("#F0103").val()) +
+    Number($("#F0203").val()) +
+    Number($("#F0303").val()) +
+    Number($("#F0403").val()) +
+    Number($("#F0503").val()) +
+    Number($("#F0603").val()) +
+    Number($("#F0703").val()) +
+    Number($("#F0803").val()) +
+    Number($("#F0903").val()) +
+    Number($("#F1003").val()) +
+    Number($("#F1103").val());
   return sum;
 };
 
 const mean_H0003 = () => {
-  const mean = $("#H0002").val() / $("#H0001").val();
+  const mean = Number($("#H0002").val()) / Number($("#H0001").val());
   return mean;
 };
 

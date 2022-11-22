@@ -1,10 +1,11 @@
+const ID = Date.now();
+const VERSION = "v20221122.1";
+
 if (navigator.serviceWorker) {
   navigator.serviceWorker
     .register("/cadastramento/sw.js", { scope: "/cadastramento/" })
     .then(() => console.log("Service Worker registrado"));
 }
-
-const ID = Date.now();
 
 const sum_E1200 = () => {
   const sum =
@@ -408,6 +409,24 @@ const share = () => {
     title: file_name,
     files: [file],
   });
+};
+
+const download = () => {
+  const content = get_responses();
+  const file_name = "3V3-CAD-" + ID + ".txt";
+  const file = new Blob([content], {
+    type: "text/json;charset=UTF-8",
+  });
+  const reader = new FileReader();
+  reader.onload = () => {
+    const popup = window.open();
+    const link = document.createElement("a");
+    link.setAttribute("href", reader.result);
+    link.setAttribute("download", file_name);
+    popup.document.body.appendChild(link);
+    link.click();
+  };
+  reader.readAsDataURL(file);
 };
 
 $(document).ready(() => {

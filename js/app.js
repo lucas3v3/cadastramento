@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20221122.1";
+const VERSION = "v20221122.2";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker

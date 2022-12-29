@@ -7,6 +7,7 @@
   <link rel="manifest" href="/cadastramento/manifest.webmanifest" />
   <link rel="shortcut icon" href="/cadastramento/img/icon.png" />
   <script src="/cadastramento/js/jquery.slim.min.js"></script>
+  <script src="/cadastramento/js/jquery.mask.min.js"></script>
   <script src="/cadastramento/js/bootstrap.bundle.min.js"></script>
   <script src="/cadastramento/js/app.js"></script>
   <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css" />
@@ -188,6 +189,7 @@
                   class="form-control"
                   id="B0010"
                   placeholder=""
+                  data-mask="(00) 00000-0000"
                 />
               </div>
               <hr />
@@ -336,10 +338,12 @@
               <div class="form-group">
                 <label for="C0004">CPF</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="C0004"
                   placeholder=""
+                  data-mask="000.000.000-00"
+                  data-mask-reverse="true"
                 />
               </div>
               <div class="form-group">
@@ -1040,6 +1044,8 @@
                   class="form-control"
                   id="G0002"
                   placeholder=""
+                  data-mask="00.000.000/0000-00"
+                  data-mask-reverse="true"
                 />
               </div>
               <div class="form-group">
@@ -3068,6 +3074,8 @@
                   class="form-control"
                   id="I0001"
                   placeholder=""
+                  data-mask="000.000.000-00"
+                  data-mask-reverse="true"
                 />
               </div>
               <div class="form-group">

@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20221229.1";
+const VERSION = "v20221229.2";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -432,4 +432,5 @@ const download = () => {
 $(document).ready(() => {
   $("#ID").html(ID);
   $("#VERSION").html("Versão: " + VERSION);
+  $(function(){ $.applyDataMask(); });
 });

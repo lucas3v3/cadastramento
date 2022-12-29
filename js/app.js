@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20221229.2";
+const VERSION = "v20221229.3";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -429,8 +429,15 @@ const download = () => {
   reader.readAsDataURL(file);
 };
 
+const create_input_masks = () => {
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.phone_with_ddd').mask('(00) 00000-0000');
+} 
+
 $(document).ready(() => {
   $("#ID").html(ID);
   $("#VERSION").html("Versão: " + VERSION);
-  $(function(){ $.applyDataMask(); });
+  create_input_masks();
 });

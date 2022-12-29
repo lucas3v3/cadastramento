@@ -1,6 +1,6 @@
 const PATH = "/cadastramento";
 const APP_PREFIX = "3V3-CAD";
-const VERSION = "v20221229.2";
+const VERSION = "v20221229.3";
 const CACHE_NAME = APP_PREFIX + VERSION;
 const ASSETS = [
   `${PATH}/manifest.webmanifest`,

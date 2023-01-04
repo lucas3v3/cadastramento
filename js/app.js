@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20221229.5";
+const VERSION = "v20230103.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -436,10 +436,24 @@ const create_input_masks = () => {
   $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
   $('.money').mask('000.000.000.000.000,00', {reverse: true});
   $('.phone').mask('(00) 00000-0000');
+  $('.date').mask('00/00/00');
 } 
+
+const start_buttons_to_fill = () => {
+  $('.na').click(function () {
+    let input_id = '#' + $(this).data("for");
+    $(input_id).val("Não aplicável");
+  });
+  $('.ni').click(function () {
+    let input_id = '#' + $(this).data("for");
+    $(input_id).val("Não informado");
+  })
+
+}
 
 $(document).ready(() => {
   $("#ID").html(ID);
   $("#VERSION").html("Versão: " + VERSION);
   create_input_masks();
+  start_buttons_to_fill();
 });

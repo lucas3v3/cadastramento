@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CAD - 3v3 Tecnologia</title>
+  <!-- <title>CAD - 3v3 Tecnologia</title>
   <link rel="canonical" href="https://lucas3v3.github.io/cadastramento/" />
   <link rel="manifest" href="/cadastramento/manifest.webmanifest" />
   <link rel="shortcut icon" href="/cadastramento/img/icon.png" />
@@ -10,7 +10,15 @@
   <script src="/cadastramento/js/jquery.mask.min.js"></script>
   <script src="/cadastramento/js/bootstrap.bundle.min.js"></script>
   <script src="/cadastramento/js/app.js"></script>
-  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/cadastramento/css/bootstrap.min.css" /> -->
+  <title>CAD - 3v3 Tecnologia LOCAL</title>
+  <link rel="shortcut icon" href="./img/icon.png" />
+  <script src="./js/jquery.slim.min.js"></script>
+  <script src="./js/jquery.mask.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./sw.js"></script> -->
+  <script src="./js/app.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
 </head>
 <body>
   <div class="jumbotron jumbotron-fluid">
@@ -56,17 +64,24 @@
             <form>
               <div class="form-group">
                 <label for="A0000">Nome do cadastrador</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="A0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="A0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="A0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="A0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="A0100">Tipo do cadastro</label>
                 <select class="form-control" id="A0100">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Pessoa física</option>
                   <option>Pessoa jurídica</option>
                 </select>
@@ -94,109 +109,176 @@
             <form>
               <div class="form-group">
                 <label for="B0000">Nome ou Razão Social</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0001">Inscrição Estadual do Empreendimento</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0002">Nome Fantasia</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0002"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0002"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0002" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0002" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0003">CNAE da Atividade Principal</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="B0003"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0003"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0003" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0003" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0004">Endereço</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0004"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0004"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0004" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0004" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0005">Complemento</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0005"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0005"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0005" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0005" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0008">Número</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="B0008"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0008"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0008" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0008" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0009">Bairro/CEP</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0009"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0009"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0009" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0009" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0006">E-mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="B0006"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0006"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0006" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0006" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0007">Município/UF</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0007"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0007"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0007" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0007" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0010">Telefone</label>
-                <input
-                  type="text"
-                  class="form-control phone"
-                  id="B0010"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control phone"
+                    id="B0010"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0010" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0010" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Tipo de Empreendimento</h4>
               <div class="form-group">
                 <label for="B0100"></label>
                 <select class="form-control" id="B0100">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Administração Pública</option>
                   <option>Agropecuária</option>
                   <option>Indústria</option>
@@ -214,77 +296,125 @@
               </div>
               <div class="form-group">
                 <label for="x0000">Número de Trabalhadores</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="x0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="x0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="x0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="x0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Contato para Correspondência</h4>
               <div class="form-group">
                 <label for="B0200">Nome ou Razão Social</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0200"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0200"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0200" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0200" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0201">Endereço</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0201"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0201"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0201" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0201" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0202">Complemento</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0202"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0202"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0202" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0202" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0203">E-mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="B0203"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0203"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0203" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0203" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0204">Número</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="B0204"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0204"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0204" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0204" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0205">Bairro</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0205"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0205"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0205" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0205" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="B0206">Município</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="B0206"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="B0206"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="B0206" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="B0206" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -309,75 +439,123 @@
             <form>
               <div class="form-group">
                 <label for="C0000">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="C0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0001">Endereço</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="C0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0002">Função/Cargo</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="C0002"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0002"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0002" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0002" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0003">E-mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="C0003"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0003"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0003" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0003" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0004">CPF</label>
-                <input
-                  type="text"
-                  class="form-control cpf"
-                  id="C0004"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control cpf"
+                    id="C0004"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0004" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0004" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0005">RG</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="C0005"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0005"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0005" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0005" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0006">Celular</label>
-                <input
-                  type="text"
-                  class="form-control phone"
-                  id="C0006"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control phone"
+                    id="C0006"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0006" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0006" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="C0007">Município</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="C0007"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="C0007"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="C0007" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="C0007" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -402,95 +580,145 @@
             <form>
               <div class="form-group">
                 <label for="D0000">Nome do Manancial</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="D0001">Município</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="D0002">Outorga</label>
                 <select class="form-control" id="D0002">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="D0003">Nº</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0003"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0003"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0003" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0003" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
+              <hr />
               <h4>Subterrâneo</h4>
               <div class="form-group">
                 <label for="D0004"></label>
                 <select class="form-control" id="D0004">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Cacimba ou Poço</option>
                   <option>Poço tubular</option>
                 </select>
               </div>
               <div class="form-group input-group">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="D0005"
-                  placeholder="Profundidade"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text">m</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0005"
+                    placeholder="Profundidade"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">m</span>
+                    <button type="button" data-for="D0005" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0005" class="btn btn-outline-secondary na">❌</button>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="D0006">Nº da LAU do Poço tubular (se houver)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="D0006"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0006"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0006" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0006" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
+              <hr />
               <h4>Superficial</h4>
               <div class="form-group">
                 <label for="D0007">Mina ou nascente</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0007"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0007"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0007" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0007" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="D0008">Rio, córrego ou lago</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0008"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0008"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0008" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0008" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="D0009">Bacia hidrográfica</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="D0009"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="D0009"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="D0009" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="D0009" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Coordenadas do ponto de captação/lançamento</h4>
@@ -1029,46 +1257,71 @@
               <h4>Contratação da Empresa</h4>
               <div class="form-group">
                 <label for="G0001">Empresa perfuradora</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="G0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <select class="form-control" id="G0000">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Identificada</option>
                   <option>Não identificada</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="G0002">CNPJ</label>
-                <input
-                  type="text"
-                  class="form-control cnpj"
-                  id="G0002"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control cnpj"
+                    id="G0002"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0002" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0002" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="G0003">Endereço</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="G0003"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0003"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0003" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0003" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="G0004">Responsável técnico</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="G0004"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0004"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0004" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0004" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
@@ -1080,19 +1333,26 @@
               </div>
               <div class="form-group">
                 <label for="G0005">CREA</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="G0005"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0005"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0005" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0005" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Características do Poço</h4>
               <div class="form-group">
                 <label for="G0100">Natureza do Poço</label>
                 <select class="form-control" id="G0100">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Piezométrico</option>
                   <option>Poço Tubular</option>
                   <option>Poço Pinteira</option>
@@ -1105,13 +1365,15 @@
                 <label for="G0101">Profundidade do poço</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0101"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0101" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0101" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1119,13 +1381,15 @@
                 <label for="G0102">Altura da boca do poço</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0102"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0102" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0102" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1133,13 +1397,15 @@
                 <label for="G0103">Diâmetro de perfuração</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0103"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">pol</span>
+                    <button type="button" data-for="G0103" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0103" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1147,13 +1413,15 @@
                 <label for="G0104">De</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0104"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0104" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0104" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1161,24 +1429,32 @@
                 <label for="G0105">Até</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0105"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0105" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0105" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0106">Data de instalação do Poço</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="G0106"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control date"
+                    id="G0106"
+                    placeholder="dd/mm/aa"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0106" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0106" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
@@ -1192,13 +1468,15 @@
                 <label for="G0108">Cota do Terreno</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0108"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0108" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0108" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1213,7 +1491,8 @@
               <div class="form-group">
                 <label for="G0110">Filtro</label>
                 <select class="form-control" id="G0110">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Plástico geomecânico</option>
                   <option>Plástico geomecânico reforçado</option>
                   <option>Estampado galvanizado</option>
@@ -1229,20 +1508,23 @@
                 <label for="G0111">Revestimento (diâmetro do tubo)</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0111"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">pol</span>
+                    <button type="button" data-for="G0111" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0111" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0112">Revestimento</label>
                 <select class="form-control" id="G0112">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Aço preto</option>
                   <option>Aço inox</option>
                   <option>Aço sem costura</option>
@@ -1258,7 +1540,8 @@
               <div class="form-group">
                 <label for="G0113">Acabamento</label>
                 <select class="form-control" id="G0113">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>
                     Equipamentos de medição de volume extraído - hidrômetro
                   </option>
@@ -1273,7 +1556,8 @@
               <div class="form-group">
                 <label for="G0200">Operação</label>
                 <select class="form-control" id="G0200">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Ativo (bombeando)</option>
                   <option>Desativado com equipamento</option>
                   <option>Não utilizável</option>
@@ -1295,7 +1579,8 @@
               <div class="form-group">
                 <label for="G0202">Instalação da bomba</label>
                 <select class="form-control" id="G0202">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Submersa</option>
                   <option>Ar comprimido</option>
                   <option>Injetora</option>
@@ -1316,13 +1601,15 @@
                 >
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0204"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0204" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0204" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1338,13 +1625,15 @@
                 <label for="G0206">Crivo da bomba</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0206"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0206" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0206" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1360,13 +1649,15 @@
                 <label for="G0208">Capacidade da bomba</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0208"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">cv</span>
+                    <button type="button" data-for="G0208" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0208" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1376,13 +1667,15 @@
                 >
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0209"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0209" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0209" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1390,13 +1683,15 @@
                 <label for="G0300">Nível estático (NE)</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0300"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0300" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0300" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1404,13 +1699,15 @@
                 <label for="G0301">Nível dinâmico (ND)</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0301"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0301" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0301" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1418,13 +1715,15 @@
                 <label for="G0302">Coluna estática</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0302"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0302" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0302" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1432,13 +1731,15 @@
                 <label for="G0303">Coluna dinâmica</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0303"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0303" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0303" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1446,13 +1747,15 @@
                 <label for="G0304">Rebaixamento</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0304"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0304" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0304" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1460,13 +1763,15 @@
                 <label for="G0305">Vazão de Estabilização</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0305"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/h</span>
+                    <button type="button" data-for="G0305" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0305" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1474,13 +1779,15 @@
                 <label for="G0306">Base</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0306"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0306" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0306" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1488,24 +1795,32 @@
                 <label for="G0307">Topo</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0307"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="G0307" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0307" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0308">Aquífero Explorado</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="G0308"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0308"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0308" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0308" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <div class="form-check">
@@ -1518,7 +1833,8 @@
               <div class="form-group">
                 <label for="G0310">Condições do Aquífero</label>
                 <select class="form-control" id="G0310">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Livre</option>
                   <option>Semi-livre</option>
                   <option>Confinado</option>
@@ -1528,7 +1844,8 @@
               <div class="form-group">
                 <label for="G0311">Penetração do Aquífero</label>
                 <select class="form-control" id="G0311">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Parcial</option>
                   <option>Total</option>
                 </select>
@@ -1537,13 +1854,15 @@
                 <label for="G0312">Vazão de bombeamento</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0312"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/h</span>
+                    <button type="button" data-for="G0312" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0312" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1551,13 +1870,15 @@
                 <label for="G0313">Coeficiente de armazenamento</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0313"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">S</span>
+                    <button type="button" data-for="G0313" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0313" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1565,13 +1886,15 @@
                 <label for="G0314">Vazão específica</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0314"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/h</span>
+                    <button type="button" data-for="G0314" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0314" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1579,13 +1902,15 @@
                 <label for="G0315">Permeabilidade</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0315"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m/s</span>
+                    <button type="button" data-for="G0315" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0315" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1593,13 +1918,15 @@
                 <label for="G0316">Transmissibilidade</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0316"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m²/s</span>
+                    <button type="button" data-for="G0316" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0316" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1607,13 +1934,15 @@
                 <label for="G0317">Condutividade hidráulica</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0317"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m/s</span>
+                    <button type="button" data-for="G0317" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0317" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1621,12 +1950,18 @@
                 <label for="G0318"
                   >Data de realização do teste de Bombeamento</label
                 >
-                <input
-                  type="date"
-                  class="form-control"
-                  id="G0318"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control date"
+                    id="G0318"
+                    placeholder="dd/mm/aa"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0318" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0318" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="G0319"
@@ -1634,20 +1969,23 @@
                 >
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0319"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">horas</span>
+                    <button type="button" data-for="G0319" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0319" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0320">Tipo de teste</label>
                 <select class="form-control" id="G0320">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Contínuo</option>
                   <option>Escalonado</option>
                   <option>Recarga</option>
@@ -1676,13 +2014,15 @@
                 <label for="G0323">01 - Bicarbonatos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0323"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0323" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0323" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1690,13 +2030,15 @@
                 <label for="G0324">02 - Cálcio</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0324"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0324" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0324" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1704,13 +2046,15 @@
                 <label for="G0325">03 - Carbonatos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0325"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0325" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0325" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1718,13 +2062,15 @@
                 <label for="G0326">04 - Cloretos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0326"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0326" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0326" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1732,13 +2078,15 @@
                 <label for="G0327">05 - Condutividade</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0327"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">uC/cm</span>
+                    <button type="button" data-for="G0327" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0327" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1746,13 +2094,15 @@
                 <label for="G0328">06 - Dureza total</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0328"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0328" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0328" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1760,13 +2110,15 @@
                 <label for="G0329">07 - Ferro total</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0329"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0329" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0329" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1774,13 +2126,15 @@
                 <label for="G0330">08 - Fluoretos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0330"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0330" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0330" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1788,13 +2142,15 @@
                 <label for="G0331">09 - Fosfatos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0331"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0331" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0331" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1802,13 +2158,15 @@
                 <label for="G0332">10 - Magnésio</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0332"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0332" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0332" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1816,13 +2174,15 @@
                 <label for="G0333">11 - Nitratos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0333"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0333" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0333" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1830,36 +2190,46 @@
                 <label for="G0334">12 - Nitritos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0334"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0334" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0334" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0335">13 - pH</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="G0335"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="G0335"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0335" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0335" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="G0336">14 - Potássio</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0336"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0336" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0336" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1867,13 +2237,15 @@
                 <label for="G0337">15 - Sódio</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0337"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0337" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0337" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1881,13 +2253,15 @@
                 <label for="G0338">16 - Sólidos dissolvidos totais</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0338"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0338" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0338" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1895,13 +2269,15 @@
                 <label for="G0339">17 - Sulfatos</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0339"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">mg/l</span>
+                    <button type="button" data-for="G0339" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0339" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1909,13 +2285,15 @@
                 <label for="G0340">18 - Turbidez</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0340"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">UT</span>
+                    <button type="button" data-for="G0340" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0340" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1923,13 +2301,15 @@
                 <label for="G0341">19 - Temperatura</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0341"
                     placeholder=""
                   />
                   <div class="input-group-append">
-                    <span class="input-group-text">C</span>
+                    <span class="input-group-text">°C</span>
+                    <button type="button" data-for="G0341" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0341" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1937,13 +2317,15 @@
                 <label for="G0342">20 - Coliformes fecais</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0342"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">NMP/100ml</span>
+                    <button type="button" data-for="G0342" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0342" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -1951,33 +2333,47 @@
                 <label for="G0343">21 - Coliformes totais</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="G0343"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">NMP/100ml</span>
+                    <button type="button" data-for="G0343" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0343" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="G0344">Data da coleta</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="G0344"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control date"
+                    id="G0344"
+                    placeholder="dd/mm/aa"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0344" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0344" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="G0345">Data da análise</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="G0345"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control date"
+                    id="G0345"
+                    placeholder="dd/mm/aa"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="G0345" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="G0345" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2009,7 +2405,8 @@
               <div class="form-group">
                 <label for="H0000">Tipo de estabelecimento</label>
                 <select class="form-control" id="H0000">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Alojamento</option>
                   <option>Hotel</option>
                   <option>Escola com lanchonete, sem ginásio, chuveiro</option>
@@ -2033,24 +2430,32 @@
               </div>
               <div class="form-group">
                 <label for="H0001">Número de pessoas</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="H0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0002">Quantidade por dia</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0002"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">litros</span>
+                    <button type="button" data-for="H0002" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0002" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2058,51 +2463,77 @@
               <h4>Abastecimento Público: Empreendimentos de Saneamento</h4>
               <div class="form-group">
                 <label for="H0100">Entidade concedente</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0100"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0100"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0100" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0100" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0101">Distrito</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0101"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0101"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0101" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0101" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0102">Município</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0102"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0102"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0102" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0102" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0103">Data final da concessão</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="H0103"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control date"
+                    id="H0103"
+                    placeholder="dd/mm/aa"
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0103" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0103" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0104">Vazão per capita</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0104"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">litros/habitante</span>
+                    <button type="button" data-for="H0104" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0104" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2111,69 +2542,88 @@
                   <label for="H0105">População atendida</label>
                   <div class="input-group">
                     <input
-                      type="number"
+                      type="text"
                       class="form-control"
                       id="H0105"
                       placeholder=""
                     />
                     <div class="input-group-append">
                       <span class="input-group-text">habitantes</span>
+                      <button type="button" data-for="H0105" class="btn btn-outline-secondary ni">⁉️</button>
+                      <button type="button" data-for="H0105" class="btn btn-outline-secondary na">❌</button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0106">Horizonte de projeto (10 anos)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="H0106"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0106"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0106" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0106" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <div class="form-group input-group">
                   <label for="H0107">Previsão de perdas</label>
                   <div class="input-group">
                     <input
-                      type="number"
+                      type="text"
                       class="form-control"
                       id="H0107"
                       placeholder=""
                     />
                     <div class="input-group-append">
                       <span class="input-group-text">%</span>
+                      <button type="button" data-for="H0107" class="btn btn-outline-secondary ni">⁉️</button>
+                      <button type="button" data-for="H0107" class="btn btn-outline-secondary na">❌</button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0108">Número da concessão</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0108"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0108"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0108" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0108" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0109">População do projeto</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0109"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">habitantes</span>
+                    <button type="button" data-for="H0109" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0109" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0110">Tipo de Prestadora de Serviços</label>
                 <select class="form-control" id="H0110">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Administração direta (prefeitura)</option>
                   <option>Administração indireta (SAAE ou similares)</option>
                   <option>Autorizada (associações, cooperativas)</option>
@@ -2184,33 +2634,47 @@
               <h4>Processo industrial</h4>
               <div class="form-group">
                 <label for="H0200">Produtos elaborados</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0200"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0200"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0200" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0200" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0201">Tipo (CNAE)</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0201"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0201"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0201" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0201" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0202">Consumo industrial</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0202"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/dia</span>
+                    <button type="button" data-for="H0202" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0202" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2218,13 +2682,15 @@
                 <label for="H0203">Previsão de perdas</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0203"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">%</span>
+                    <button type="button" data-for="H0203" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0203" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2321,7 +2787,8 @@
               <div class="form-group">
                 <label for="H0320">Reservatório</label>
                 <select class="form-control" id="H0320">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -2330,13 +2797,15 @@
                 <label for="H0321">Área da lâmina d'água</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0321"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m²</span>
+                    <button type="button" data-for="H0321" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0321" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2344,13 +2813,15 @@
                 <label for="H0322">Profundidade média</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0322"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="H0322" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0322" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2360,13 +2831,15 @@
                 >
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0323"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">R$</span>
+                    <button type="button" data-for="H0323" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0323" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2374,40 +2847,55 @@
               <h4>Aquicultura (piscicultura, ranicultura, entre outros)</h4>
               <div class="form-group">
                 <label for="H0400">Nº de tanques</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0400"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0400"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0400" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0400" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0401">Lâmina d'água</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0401"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">ha</span>
+                    <button type="button" data-for="H0401" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0401" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0402">Tipo de criação</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0402"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0402"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0402" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0402" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0403">Tipo de Estrutura</label>
                 <select class="form-control" id="H0403">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Barramento ou açude em curso d'água</option>
                   <option>Barramento para tanque rede/gaiola</option>
                 </select>
@@ -2416,13 +2904,15 @@
                 <label for="H0404">Espelho d'água</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0404"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³</span>
+                    <button type="button" data-for="H0404" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0404" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2430,37 +2920,47 @@
                 <label for="H0405">Profundidade média</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0405"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m</span>
+                    <button type="button" data-for="H0405" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0405" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0406">Localização da estrutura</label>
                 <select class="form-control" id="H0406">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>No leito do curso de água</option>
                   <option>Fora do leito do curso de água</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="H0407">Espécies a serem criadas</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0407"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0407"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0407" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0407" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0408">Atividade a ser desenvolvida</label>
                 <select class="form-control" id="H0408">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Cria</option>
                   <option>Recria</option>
                   <option>Engorda</option>
@@ -2472,27 +2972,31 @@
                 <label for="H0409">Produtividade</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0409"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">Kg/ha/ciclo</span>
+                    <button type="button" data-for="H0409" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0409" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group input-group">
+                <label for="H0410"></label>
                 <div class="input-group">
-                  <label for="H0410"></label>
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0410"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">Ciclos/ano</span>
+                    <button type="button" data-for="H0410" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0410" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2613,7 +3117,8 @@
               <div class="form-group">
                 <label for="H0600">Tratamento do efluente</label>
                 <select class="form-control" id="H0600">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -2621,7 +3126,8 @@
               <div class="form-group">
                 <label for="H0601">Há recirculação na planta</label>
                 <select class="form-control" id="H0601">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -2629,7 +3135,8 @@
               <div class="form-group">
                 <label for="H0602">Há reuso de água na planta</label>
                 <select class="form-control" id="H0602">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -2638,36 +3145,46 @@
                 <label for="H0603">Vazão utilizada</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0603"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/s</span>
+                    <button type="button" data-for="H0603" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0603" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0604">Veículos lavados por dia</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="H0604"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0604"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0604" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0604" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0605">Volume diário</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0605"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³</span>
+                    <button type="button" data-for="H0605" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0605" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2677,13 +3194,15 @@
                 <label for="H0700">Produção máxima mensal de areia</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0700"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/mês</span>
+                    <button type="button" data-for="H0700" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0700" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2691,59 +3210,86 @@
                 <label for="H0701">Teor de umidade</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0701"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">%</span>
+                    <button type="button" data-for="H0701" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0701" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0702">Proporção de água na polpa</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0702"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0702"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0702" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0702" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label
                   >Extração de minérios em corpos de água superficiais</label
                 ><br />
                 <label for="H0703">CNAE</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0703"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0703"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0703" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0703" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0704">Produto</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0704"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0704"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0704" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0704" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0705">Quantidade máxima produzida</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0705"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0705"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0705" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0705" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="H0706">Processo extrativo</label>
                 <select class="form-control" id="H0706">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Desmonte hidráulico</option>
                   <option>Escavações em meio encosta</option>
                   <option>Lavra subterrânea</option>
@@ -2759,43 +3305,54 @@
                 <label for="H0800">Potência instalada</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0800"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">MW</span>
+                    <button type="button" data-for="H0800" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0800" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0801">Produção mensal</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0801"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0801"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0801" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0801" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0802">Média de energia</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0802"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">MWh</span>
+                    <button type="button" data-for="H0802" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0802" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0803">Combustível principal</label>
                 <select class="form-control" id="H0803">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Gás natural</option>
                   <option>Óleos vegetais</option>
                   <option>Óleo pesado</option>
@@ -2811,7 +3368,8 @@
               <div class="form-group">
                 <label for="H0900">Origem do efluente</label>
                 <select class="form-control" id="H0900">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Processo produtivo</option>
                   <option>Sanitário</option>
                   <option>Hospitalar</option>
@@ -2823,13 +3381,15 @@
                 <label for="H0901">População atendida</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0901"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">habitantes</span>
+                    <button type="button" data-for="H0901" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0901" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2837,36 +3397,46 @@
                 <label for="H0902">Contribuição per capita</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0902"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">l/habitante</span>
+                    <button type="button" data-for="H0902" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0902" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0903">Produtos elaborados</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0903"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0903"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0903" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0903" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group input-group">
                 <label for="H0904">Produção diária</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0904"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">unidade/dia</span>
+                    <button type="button" data-for="H0904" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0904" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2875,13 +3445,15 @@
                 <label for="H0905">Vazão</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0905"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">m³/h</span>
+                    <button type="button" data-for="H0905" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0905" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
@@ -2889,20 +3461,23 @@
                 <label for="H0906">Horas de captação ou lançamento/dia</label>
                 <div class="input-group">
                   <input
-                    type="number"
+                    type="text"
                     class="form-control"
                     id="H0906"
                     placeholder=""
                   />
                   <div class="input-group-append">
                     <span class="input-group-text">horas</span>
+                    <button type="button" data-for="H0906" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0906" class="btn btn-outline-secondary na">❌</button>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="H0907">Característica</label>
                 <select class="form-control" id="H0907">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>
                     Dragagem em corpo de água para fins de extração mineral
                   </option>
@@ -2912,18 +3487,25 @@
               </div>
               <div class="form-group">
                 <label for="H0908">Outros</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H0908"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H0908"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H0908" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H0908" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Racionalização e Manejo de Recursos Hídricos</h4>
               <div class="form-group">
                 <select class="form-control" id="H1000">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Transposição de bacia</option>
                   <option>Recarga de aquíferos</option>
                   <option>
@@ -2935,18 +3517,25 @@
               </div>
               <div class="form-group">
                 <label for="H1001">Outros</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H1001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H1001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H1001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H1001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Controle Ambiental e Qualidade de Vida</h4>
               <div class="form-group">
                 <select class="form-control" id="H1100">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Recreação e Paisagismo</option>
                   <option>Controle de pragas e insetos</option>
                   <option>Preservação da vida selvagem e da Bacia</option>
@@ -2958,18 +3547,25 @@
               </div>
               <div class="form-group">
                 <label for="H1101">Outros</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H1101"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H1101"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H1101" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H1101" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <hr />
               <h4>Utilização militar ou de Segurança</h4>
               <div class="form-group">
                 <select class="form-control" id="H1200">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Proteção de objetivos estratégicos</option>
                   <option>Instalações militares ou de segurança</option>
                   <option>Instalações para uso em trânsito</option>
@@ -2979,7 +3575,8 @@
               <h4>Destinações especiais</h4>
               <div class="form-group">
                 <select class="form-control" id="H1300">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Controle alfandegários e de fronteiras</option>
                   <option>Disposição final de substâncias especiais</option>
                   <option>Experimento científico ou tecnológico</option>
@@ -2996,9 +3593,10 @@
               </h4>
               <div class="form-group">
                 <select class="form-control" id="H1400">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>
-                    Comercial, inculindo a recreação e balneabilidade
+                    Comercial, incluindo a recreação e balneabilidade
                   </option>
                 </select>
               </div>
@@ -3006,7 +3604,8 @@
               <h4>Controle Ambiental e Qualidade de Vida</h4>
               <div class="form-group">
                 <select class="form-control" id="H1500">
-                  <option></option>
+                  <option>Não informado</option>
+                  <option>Não aplicável</option>
                   <option>Combate a incêndio</option>
                   <option>Salvamento</option>
                   <option>Controle de emissão de partículas</option>
@@ -3029,12 +3628,18 @@
               </div>
               <div class="form-group">
                 <label for="H1501">Outros</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="H1501"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="H1501"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="H1501" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="H1501" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -3064,39 +3669,63 @@
             <form>
               <div class="form-group">
                 <label for="I0000">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="I0000"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="I0000"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="I0000" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="I0000" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="I0001">CPF</label>
-                <input
-                  type="text"
-                  class="form-control cpf"
-                  id="I0001"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control cpf"
+                    id="I0001"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="I0001" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="I0001" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="I0002">Cargo</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="I0002"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="I0002"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="I0002" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="I0002" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="I0003">Local</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="I0003"
-                  placeholder=""
-                />
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="I0003"
+                    placeholder=""
+                  />
+                  <div class="input-group-append">
+                    <button type="button" data-for="I0003" class="btn btn-outline-secondary ni">⁉️</button>
+                    <button type="button" data-for="I0003" class="btn btn-outline-secondary na">❌</button>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="I0004">Observações finais</label>

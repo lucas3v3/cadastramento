@@ -1,6 +1,6 @@
 const PATH = "/cadastramento";
 const APP_PREFIX = "3V3-CAD";
-const VERSION = "v20230106.1";
+const VERSION = "v20230106.2";
 const CACHE_NAME = APP_PREFIX + VERSION;
 const ASSETS = [
   `${PATH}/manifest.webmanifest`,
@@ -38,14 +38,12 @@ self.addEventListener("fetch", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keyList) => {
-      var cacheWhitelist = keyList.filter((key) => key.indexOf(APP_PREFIX));
-      cacheWhitelist.push(CACHE_NAME);
+    caches.keys().then(keyList => {
       return Promise.all(
-        keyList.map((key, i) => {
-          if (cacheWhitelist.indexOf(key) === -1) {
-            console.log("Apagando cache: " + keyList[i]);
-            return caches.delete(keyList[i]);
+        keyList.map(cache => {
+          if (cache !== CACHE_NAME) {
+            console.log("Apagando cache: " + cache);
+            return caches.delete(cache);
           }
         })
       );

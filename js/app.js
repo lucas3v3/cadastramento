@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20230113.1";
+const VERSION = "v20230215.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -434,9 +434,23 @@ const download = () => {
 const create_input_masks = () => {
   $('.cpf').mask('000.000.000-00', {reverse: true});
   $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
-  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.rg').mask('000000000000000000000');
+  $('.crea').mask('0000000000');
+  $('.ie').mask('00.000000-0', {reverse: true});
+  $('.cnae').mask('00.00-0-00', {reverse: true});
+  $('.money').mask('000.000.000,00', {reverse: true});
   $('.phone').mask('(00) 00000-0000');
+  $('.lat-dd').mask('-0.0000');
+  $('.lon-dd').mask('-00.0000');
+  $('.n-utm').mask('000000.0000');
+  $('.l-utm').mask('0000000.0000');
   $('.date').mask('00/00/00');
+  $('.7-digit-number').mask('0000000');
+  $('.6-digit-number').mask('000000');
+  $('.5-digit-number').mask('00000');
+  $('.4-digit-number').mask('0000');
+  $('.3-digit-number').mask('000');
+  $('.2-digit-number').mask('00');
 } 
 
 const start_buttons_to_fill = () => {

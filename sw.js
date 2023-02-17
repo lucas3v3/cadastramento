@@ -1,12 +1,13 @@
 const PATH = "/cadastramento";
 const APP_PREFIX = "3V3-CAD";
-const VERSION = "v20230215.1";
+const VERSION = "v20230217.1";
 const CACHE_NAME = APP_PREFIX + VERSION;
 const ASSETS = [
   `${PATH}/manifest.webmanifest`,
   `${PATH}/js/jquery.slim.min.js`,
   `${PATH}/js/jquery.mask.min.js`,
   `${PATH}/js/bootstrap.bundle.min.js`,
+  `${PATH}/js/autocomplete.min.js`,
   `${PATH}/js/app.js`,
   `${PATH}/css/bootstrap.min.css`,
   `${PATH}/img/icon.png`,

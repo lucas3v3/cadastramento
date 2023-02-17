@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20230215.1";
+const VERSION = "v20230217.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -442,8 +442,8 @@ const create_input_masks = () => {
   $('.phone').mask('(00) 00000-0000');
   $('.lat-dd').mask('-0.0000');
   $('.lon-dd').mask('-00.0000');
-  $('.n-utm').mask('000000.0000');
-  $('.l-utm').mask('0000000.0000');
+  $('.n-utm').mask('000000.0');
+  $('.l-utm').mask('0000000.0');
   $('.date').mask('00/00/00');
   $('.7-digit-number').mask('0000000');
   $('.6-digit-number').mask('000000');
@@ -452,6 +452,29 @@ const create_input_masks = () => {
   $('.3-digit-number').mask('000');
   $('.2-digit-number').mask('00');
 } 
+
+const autocomplete_cities = () => {
+  $("#B0007").autocomplete({
+    source: cities,
+    treshold: 2
+  });
+  $("#B0206").autocomplete({
+    source: cities,
+    treshold: 2
+  });
+  $("#C0007").autocomplete({
+    source: cities,
+    treshold: 2
+  });
+  $("#D0001").autocomplete({
+    source: cities,
+    treshold: 2
+  });
+  $("#H0102").autocomplete({
+    source: cities,
+    treshold: 2
+  });
+}
 
 const start_buttons_to_fill = () => {
   $('.na').click(function () {
@@ -464,9 +487,100 @@ const start_buttons_to_fill = () => {
   })
 }
 
+const cities = {
+  // Alto Jaguaribe
+  "Acopiara": 1,
+  "Auiaba": 2,
+  "Altaneira": 3,
+  "Antonina do Norte": 4,
+  "Araripe": 5,
+  "Arneiroz": 6,
+  "Assaré": 7,
+  "Campos Sales": 8,
+  "Cariús": 9,
+  "Catarina": 10,
+  "Farias Brito": 11,
+  "Icó": 12,
+  "Iguatu": 13,
+  "Jucás": 14,
+  "Nova Olinda": 15,
+  "Orós": 16,
+  "Parambu": 17,
+  "Potengi": 18,
+  "Quixelô": 19,
+  "Saboeiro": 20,
+  "Salitre": 21,
+  "Santana do Cariri": 22,
+  "Tarrafas":23,
+  "Tauá":24,
+  // Médio Jaguaribe
+  "Alto Santo": 25,
+  "Deputado Irapuan Pinheiro": 26,
+  "Ererê": 27,
+  "Iracema": 28,
+  "Jaguaretama": 29,
+  "Jaguaribara": 30,
+  "Jaguaribe": 31,
+  "Milhã": 32,
+  "Pereiro": 33,
+  "Potiretama": 34,
+  "São João do Jaguaribe": 35,
+  "Solonópoles": 36,
+  "Tabuleiro do Norte": 37,
+  // Baixo Jaguaribe
+  "Aracati": 38,
+  "Fortim": 39,
+  "Icapuí": 40,
+  "Itaiçaba": 41,
+  "Jaguaruana": 42,
+  "Limoeiro do Norte": 43,
+  "Palhano": 44,
+  "Quixeré": 45,
+  "Russas": 46,
+  // Banabuiú
+  "Banabuiú": 47,
+  "Boa Viagem": 48,
+  "Ibicuitinga": 49,
+  "Madalena": 50,
+  "Mombaça": 51,
+  "Monsenhor Tabosa": 52,
+  "Morada Nova": 53,
+  "Pedra Branca": 54,
+  "Piquet Carneiro": 55,
+  "Quixadá": 56,
+  "Quixeramobim": 57,
+  "Senador Pompeu": 58,
+  "Itatira": 59,
+  // Salgado
+  "Abaiara": 60,
+  "Aurora": 61,
+  "Baixio": 62,
+  "Barbalha": 63,
+  "Barro": 64,
+  "Brejo Santo": 65,
+  "Caririaçu": 66,
+  "Cedro": 67,
+  "Crato": 68,
+  "Granjeiro": 69,
+  "Ipaumirim": 70,
+  "Jardim": 71,
+  "Jati": 72,
+  "Juazeiro do Norte": 73,
+  "Lavras da Mangabeira": 74,
+  "Mauriti": 75,
+  "Milagres": 76,
+  "Missão Velha": 77,
+  "Penaforte": 78,
+  "Porteiras": 79,
+  "Umari": 80,
+  "Várzea Alegre": 81
+};
+
+
 $(document).ready(() => {
   $("#ID").html(ID);
   $("#VERSION").html("Versão: " + VERSION);
   create_input_masks();
   start_buttons_to_fill();
+  autocomplete_cities();
 });

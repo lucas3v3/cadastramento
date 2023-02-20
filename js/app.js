@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20230217.1";
+const VERSION = "v20230220.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -487,6 +487,26 @@ const start_buttons_to_fill = () => {
   })
 }
 
+const prevent_form_submit = () => {
+  $("form").submit(function(e){
+    e.preventDefault();
+  });
+}
+
+const start_flow_calculation = () => {
+  let debounce = null;
+  $(".flow-calc").keyup(function () {
+    clearTimeout(debounce);
+    let partial_id = $(this).attr('id').slice(0,-1);
+    debounce = setTimeout(function () {
+      let volume = Number($(`#${partial_id}0`).val()) *
+                   Number($(`#${partial_id}1`).val()) *
+                   Number($(`#${partial_id}2`).val())
+      $(`#${partial_id}3`).val(`${volume}`)
+    }, 500)
+  })
+}
+
 const cities = {
   // Alto Jaguaribe
   "Acopiara": 1,
@@ -583,4 +603,6 @@ $(document).ready(() => {
   create_input_masks();
   start_buttons_to_fill();
   autocomplete_cities();
+  prevent_form_submit();
+  start_flow_calculation();
 });

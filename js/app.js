@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20230220.1";
+const VERSION = "v20230301.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -438,7 +438,7 @@ const create_input_masks = () => {
   $('.crea').mask('0000000000');
   $('.ie').mask('00.000000-0', {reverse: true});
   $('.cnae').mask('00.00-0-00', {reverse: true});
-  $('.money').mask('000.000.000,00', {reverse: true});
+  $('.money').mask('000000000.00', {reverse: true});
   $('.phone').mask('(00) 00000-0000');
   $('.lat-dd').mask('-0.0000');
   $('.lon-dd').mask('-00.0000');
@@ -446,11 +446,17 @@ const create_input_masks = () => {
   $('.l-utm').mask('0000000.0');
   $('.date').mask('00/00/00');
   $('.7-digit-number').mask('0000000');
+  $('.7-digit-number-dot').mask('0000000.00', {reverse: true});
   $('.6-digit-number').mask('000000');
+  $('.6-digit-number-dot').mask('000000.00', {reverse: true});
   $('.5-digit-number').mask('00000');
+  $('.5-digit-number-dot').mask('00000.00', {reverse: true});
   $('.4-digit-number').mask('0000');
+  $('.4-digit-number-dot').mask('0000.00', {reverse: true});
   $('.3-digit-number').mask('000');
+  $('.3-digit-number-dot').mask('000.00', {reverse: true});
   $('.2-digit-number').mask('00');
+  $('.2-digit-number-dot').mask('00.00', {reverse: true});
 } 
 
 const autocomplete_cities = () => {

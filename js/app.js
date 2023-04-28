@@ -1,5 +1,5 @@
 const ID = Date.now();
-const VERSION = "v20230301.1";
+const VERSION = "v20230428.1";
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -398,7 +398,8 @@ const get_responses = () => {
     I0003: $("#I0003").val(),
     I0004: $("#I0004").val(),
     //x
-    x0000: $("#x0000").val()
+    x0000: $("#x0000").val(),
+    x0001: $("#x0001").val()
   };
   return JSON.stringify(response);
 };
